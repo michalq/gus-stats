@@ -1,0 +1,7 @@
+{
+    "packageName": "gus",
+    "enumClassPrefix": true,
+    "generateInterfaces": true,
+    "isGoSubmodule": true,
+    "useOneOfDiscriminatorLookup": true
+}
