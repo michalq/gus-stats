@@ -1,12 +1,14 @@
-.PHONY: build clean
+.PHONY: build clean run
+
+run:
+	go run cmd/retrieve/main.go
 
 OPENAPI_GENERATOR_VERSION=v6.2.1
 OPENAPI_GENERATOR=go
-
 clean:
 	rm -rf pkg/client_*
 build: pkg/client_gus
-
+	goimports -w pkg/*
 pkg/client_gus:
 	mkdir pkg/client_gus
 	cp api/.openapi-generator-ignore pkg/client_gus/.openapi-generator-ignore

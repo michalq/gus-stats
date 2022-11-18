@@ -26,7 +26,7 @@
                   "pl",
                   "en"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -39,7 +39,7 @@
                   "jsonapi",
                   "xml"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -51,7 +51,7 @@
                   "pl",
                   "en"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -64,7 +64,7 @@
                   "application/vnd.api+json",
                   "application/xml"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -169,7 +169,7 @@
                   "pl",
                   "en"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -182,7 +182,7 @@
                   "jsonapi",
                   "xml"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -194,7 +194,7 @@
                   "pl",
                   "en"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -207,7 +207,7 @@
                   "application/vnd.api+json",
                   "application/xml"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -351,8 +351,7 @@
                   "Name,-Id",
                   "-Name,Id",
                   "-Name,-Id"
-                ],
-                "type": "enum"
+                ]
               }
             },
             {
@@ -360,11 +359,11 @@
               "in": "query",
               "description": "Oczekiwany język odpowiedzi - opcjonalny (jeśli podano parametr, nagłówek \"Accept-Language\" jest ignorowany) / Expected response conent language - optional (if parameter specified, request header \"Accept-Language\" is ignored)",
               "schema": {
+                "type": "string",
                 "enum": [
                   "pl",
                   "en"
-                ],
-                "type": "enum"
+                ]
               }
             },
             {
@@ -377,7 +376,7 @@
                   "jsonapi",
                   "xml"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -389,7 +388,7 @@
                   "pl",
                   "en"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -402,7 +401,7 @@
                   "application/vnd.api+json",
                   "application/xml"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -537,7 +536,7 @@
                   "pl",
                   "en"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -550,7 +549,7 @@
                   "jsonapi",
                   "xml"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -562,7 +561,7 @@
                   "pl",
                   "en"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -575,7 +574,7 @@
                   "application/vnd.api+json",
                   "application/xml"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -680,7 +679,7 @@
                   "pl",
                   "en"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -693,7 +692,7 @@
                   "jsonapi",
                   "xml"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -705,7 +704,7 @@
                   "pl",
                   "en"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -718,7 +717,7 @@
                   "application/vnd.api+json",
                   "application/xml"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -929,7 +928,7 @@
                   "-Symbol,-Id,Display",
                   "-Symbol,-Id,-Display"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -941,7 +940,7 @@
                   "pl",
                   "en"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -954,7 +953,7 @@
                   "jsonapi",
                   "xml"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -966,7 +965,7 @@
                   "pl",
                   "en"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -979,7 +978,7 @@
                   "application/vnd.api+json",
                   "application/xml"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -1114,7 +1113,7 @@
                   "pl",
                   "en"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -1127,7 +1126,7 @@
                   "jsonapi",
                   "xml"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -1139,7 +1138,7 @@
                   "pl",
                   "en"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -1152,7 +1151,7 @@
                   "application/vnd.api+json",
                   "application/xml"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -1317,7 +1316,7 @@
                   "pl",
                   "en"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -1330,7 +1329,7 @@
                   "jsonapi",
                   "xml"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -1342,7 +1341,7 @@
                   "pl",
                   "en"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -1355,7 +1354,7 @@
                   "application/vnd.api+json",
                   "application/xml"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -1555,7 +1554,7 @@
                   "pl",
                   "en"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -1568,7 +1567,7 @@
                   "jsonapi",
                   "xml"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -1580,7 +1579,7 @@
                   "pl",
                   "en"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -1593,7 +1592,7 @@
                   "application/vnd.api+json",
                   "application/xml"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -1780,7 +1779,7 @@
                   "pl",
                   "en"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -1793,7 +1792,7 @@
                   "jsonapi",
                   "xml"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -1805,7 +1804,7 @@
                   "pl",
                   "en"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -1818,7 +1817,7 @@
                   "application/vnd.api+json",
                   "application/xml"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -2018,7 +2017,7 @@
                   "pl",
                   "en"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -2031,7 +2030,7 @@
                   "jsonapi",
                   "xml"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -2043,7 +2042,7 @@
                   "pl",
                   "en"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -2056,7 +2055,7 @@
                   "application/vnd.api+json",
                   "application/xml"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -2191,7 +2190,7 @@
                   "pl",
                   "en"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -2204,7 +2203,7 @@
                   "jsonapi",
                   "xml"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -2216,7 +2215,7 @@
                   "pl",
                   "en"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -2229,7 +2228,7 @@
                   "application/vnd.api+json",
                   "application/xml"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -2334,7 +2333,7 @@
                   "pl",
                   "en"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -2347,7 +2346,7 @@
                   "jsonapi",
                   "xml"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -2359,7 +2358,7 @@
                   "pl",
                   "en"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -2372,7 +2371,7 @@
                   "application/vnd.api+json",
                   "application/xml"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -2517,7 +2516,7 @@
                   "-Name,Id",
                   "-Name,-Id"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -2529,7 +2528,7 @@
                   "pl",
                   "en"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -2542,7 +2541,7 @@
                   "jsonapi",
                   "xml"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -2554,7 +2553,7 @@
                   "pl",
                   "en"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -2567,7 +2566,7 @@
                   "application/vnd.api+json",
                   "application/xml"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -2702,7 +2701,7 @@
                   "pl",
                   "en"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -2715,7 +2714,7 @@
                   "jsonapi",
                   "xml"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -2727,7 +2726,7 @@
                   "pl",
                   "en"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -2740,7 +2739,7 @@
                   "application/vnd.api+json",
                   "application/xml"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -2845,7 +2844,7 @@
                   "pl",
                   "en"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -2858,7 +2857,7 @@
                   "jsonapi",
                   "xml"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -2870,7 +2869,7 @@
                   "pl",
                   "en"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -2883,7 +2882,7 @@
                   "application/vnd.api+json",
                   "application/xml"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -3028,7 +3027,7 @@
                   "-Name,Id",
                   "-Name,-Id"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -3040,7 +3039,7 @@
                   "pl",
                   "en"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -3053,7 +3052,7 @@
                   "jsonapi",
                   "xml"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -3065,7 +3064,7 @@
                   "pl",
                   "en"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -3078,7 +3077,7 @@
                   "application/vnd.api+json",
                   "application/xml"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -3213,7 +3212,7 @@
                   "pl",
                   "en"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -3226,7 +3225,7 @@
                   "jsonapi",
                   "xml"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -3238,7 +3237,7 @@
                   "pl",
                   "en"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -3251,7 +3250,7 @@
                   "application/vnd.api+json",
                   "application/xml"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -3384,7 +3383,7 @@
                   "-Name,Id",
                   "-Name,-Id"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -3396,7 +3395,7 @@
                   "pl",
                   "en"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -3409,7 +3408,7 @@
                   "jsonapi",
                   "xml"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -3421,7 +3420,7 @@
                   "pl",
                   "en"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -3434,7 +3433,7 @@
                   "application/vnd.api+json",
                   "application/xml"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -3608,7 +3607,7 @@
                   "-Name,Id",
                   "-Name,-Id"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -3620,7 +3619,7 @@
                   "pl",
                   "en"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -3633,7 +3632,7 @@
                   "jsonapi",
                   "xml"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -3645,7 +3644,7 @@
                   "pl",
                   "en"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -3658,7 +3657,7 @@
                   "application/vnd.api+json",
                   "application/xml"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -3802,7 +3801,7 @@
                   "pl",
                   "en"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -3815,7 +3814,7 @@
                   "jsonapi",
                   "xml"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -3827,7 +3826,7 @@
                   "pl",
                   "en"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -3840,7 +3839,7 @@
                   "application/vnd.api+json",
                   "application/xml"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -3975,7 +3974,7 @@
                   "pl",
                   "en"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -3988,7 +3987,7 @@
                   "jsonapi",
                   "xml"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -4000,7 +3999,7 @@
                   "pl",
                   "en"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -4013,7 +4012,7 @@
                   "application/vnd.api+json",
                   "application/xml"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -4117,7 +4116,7 @@
                   "pl",
                   "en"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -4130,7 +4129,7 @@
                   "jsonapi",
                   "xml"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -4142,7 +4141,7 @@
                   "pl",
                   "en"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -4155,7 +4154,7 @@
                   "application/vnd.api+json",
                   "application/xml"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -4305,7 +4304,7 @@
                     "5",
                     "6"
                   ],
-                  "type": "enum",
+                  "type": "string",
                   "format": "int32"
                 }
               }
@@ -4349,7 +4348,7 @@
                   "-Name,Id",
                   "-Name,-Id"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -4361,7 +4360,7 @@
                   "pl",
                   "en"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -4374,7 +4373,7 @@
                   "jsonapi",
                   "xml"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -4386,7 +4385,7 @@
                   "pl",
                   "en"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -4399,7 +4398,7 @@
                   "application/vnd.api+json",
                   "application/xml"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -4584,7 +4583,7 @@
                   "-Name,Id",
                   "-Name,-Id"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -4616,7 +4615,7 @@
                   "pl",
                   "en"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -4629,7 +4628,7 @@
                   "jsonapi",
                   "xml"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -4641,7 +4640,7 @@
                   "pl",
                   "en"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -4654,7 +4653,7 @@
                   "application/vnd.api+json",
                   "application/xml"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -4828,7 +4827,7 @@
                   "-Name,Id",
                   "-Name,-Id"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -4840,7 +4839,7 @@
                   "pl",
                   "en"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -4853,7 +4852,7 @@
                   "jsonapi",
                   "xml"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -4865,7 +4864,7 @@
                   "pl",
                   "en"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -4878,7 +4877,7 @@
                   "application/vnd.api+json",
                   "application/xml"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -5022,7 +5021,7 @@
                   "pl",
                   "en"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -5035,7 +5034,7 @@
                   "jsonapi",
                   "xml"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -5047,7 +5046,7 @@
                   "pl",
                   "en"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -5060,7 +5059,7 @@
                   "application/vnd.api+json",
                   "application/xml"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -5225,7 +5224,7 @@
                   "-Name,Id",
                   "-Name,-Id"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -5257,7 +5256,7 @@
                   "pl",
                   "en"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -5270,7 +5269,7 @@
                   "jsonapi",
                   "xml"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -5282,7 +5281,7 @@
                   "pl",
                   "en"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -5295,7 +5294,7 @@
                   "application/vnd.api+json",
                   "application/xml"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -5430,7 +5429,7 @@
                   "pl",
                   "en"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -5443,7 +5442,7 @@
                   "jsonapi",
                   "xml"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -5455,7 +5454,7 @@
                   "pl",
                   "en"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -5468,7 +5467,7 @@
                   "application/vnd.api+json",
                   "application/xml"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -5573,7 +5572,7 @@
                   "pl",
                   "en"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -5586,7 +5585,7 @@
                   "jsonapi",
                   "xml"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -5598,7 +5597,7 @@
                   "pl",
                   "en"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -5611,7 +5610,7 @@
                   "application/vnd.api+json",
                   "application/xml"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -5805,7 +5804,7 @@
                   "-SubjectId,Id",
                   "-SubjectId,-Id"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -5817,7 +5816,7 @@
                   "pl",
                   "en"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -5830,7 +5829,7 @@
                   "jsonapi",
                   "xml"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -5842,7 +5841,7 @@
                   "pl",
                   "en"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -5855,7 +5854,7 @@
                   "application/vnd.api+json",
                   "application/xml"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -6057,7 +6056,7 @@
                   "-SubjectId,Id",
                   "-SubjectId,-Id"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -6069,7 +6068,7 @@
                   "pl",
                   "en"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -6082,7 +6081,7 @@
                   "jsonapi",
                   "xml"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -6094,7 +6093,7 @@
                   "pl",
                   "en"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -6107,7 +6106,7 @@
                   "application/vnd.api+json",
                   "application/xml"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -6242,7 +6241,7 @@
                   "pl",
                   "en"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -6254,7 +6253,7 @@
                   "json",
                   "xml"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -6266,7 +6265,7 @@
                   "pl",
                   "en"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -6278,7 +6277,7 @@
                   "application/json",
                   "application/xml"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -6368,7 +6367,7 @@
                   "pl",
                   "en"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -6381,7 +6380,7 @@
                   "jsonapi",
                   "xml"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -6393,7 +6392,7 @@
                   "pl",
                   "en"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -6406,7 +6405,7 @@
                   "application/vnd.api+json",
                   "application/xml"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -6510,7 +6509,7 @@
                   "pl",
                   "en"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -6523,7 +6522,7 @@
                   "jsonapi",
                   "xml"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -6535,7 +6534,7 @@
                   "pl",
                   "en"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -6548,7 +6547,7 @@
                   "application/vnd.api+json",
                   "application/xml"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -6683,7 +6682,7 @@
                   "Id",
                   "-Id"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -6695,7 +6694,7 @@
                   "pl",
                   "en"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -6708,7 +6707,7 @@
                   "jsonapi",
                   "xml"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -6720,7 +6719,7 @@
                   "pl",
                   "en"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
@@ -6733,7 +6732,7 @@
                   "application/vnd.api+json",
                   "application/xml"
                 ],
-                "type": "enum"
+                "type": "string"
               }
             },
             {
