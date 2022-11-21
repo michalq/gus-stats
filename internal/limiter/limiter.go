@@ -1,10 +1,15 @@
 package limiter
 
 import (
+	"context"
 	"fmt"
 	"sync"
 	"time"
 )
+
+type Limiter interface {
+	Wait()
+}
 
 type Limit struct {
 	counter    int
@@ -15,6 +20,7 @@ type Limit struct {
 	lockChan   chan struct{}
 	unlockChan chan struct{}
 	firstCall  bool
+	isDone     bool
 }
 
 func NewLimit(limit int, duration time.Duration) *Limit {
@@ -23,6 +29,7 @@ func NewLimit(limit int, duration time.Duration) *Limit {
 		limit:      limit,
 		duration:   duration,
 		firstCall:  true,
+		isDone:     false,
 		lockChan:   make(chan struct{}, 1),
 		unlockChan: make(chan struct{}, 1),
 	}
@@ -56,16 +63,23 @@ func (l *Limit) debug(s string, params ...any) {
 	}
 }
 
-func (l *Limit) wait() {
+func (l *Limit) wait(ctx context.Context) {
 	if len(l.lockChan) > 0 {
-		// Wait for unlock
-		<-l.unlockChan
-		// Reset lock channel
-		<-l.lockChan
+		select {
+		case <-l.unlockChan:
+			// Wait for unlock
+			// Reset lock channel
+			<-l.lockChan
+		case <-ctx.Done():
+			l.isDone = true
+		}
 	}
 }
 
-func (l *Limit) Increment() {
+func (l *Limit) Wait(ctx context.Context) {
+	if l.isDone {
+		return
+	}
 	l.up()
 	l.mtx.Lock()
 	l.counter++
@@ -74,21 +88,5 @@ func (l *Limit) Increment() {
 		l.lockChan <- struct{}{}
 	}
 	l.mtx.Unlock()
-	l.wait()
-}
-
-func Xyz() {
-	limit1s := NewLimit(3, 1*time.Second)
-	limit15m := NewLimit(10, 30*time.Second)
-	// limit12h := NewLimit(1000, 12 * time.Hour)
-	// limit7d := NewLimit(10000, 7 * 24 * time.Hour)
-
-	i := 0
-	for {
-		limit1s.Increment()
-		limit15m.Increment()
-
-		i++
-		fmt.Println(i, time.Now())
-	}
+	l.wait(ctx)
 }

@@ -5,15 +5,11 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/michalq/gus-stats/internal/limiter"
 	"github.com/michalq/gus-stats/internal/subject"
 	gus "github.com/michalq/gus-stats/pkg/client_gus"
 )
 
 func main() {
-	limiter.Xyz()
-	return
-
 	ctx := context.Background()
 	gusConfig := gus.NewConfiguration()
 	gusConfig.Debug = false
@@ -51,8 +47,4 @@ func printAggregates(ctx context.Context, aggregatesApi gus.AggregatesApi) {
 	for _, aggregate := range aggrs.Results {
 		fmt.Printf("| %d | %s (%s) | \n", aggregate.Id, string(*aggregate.Name), string(*aggregate.Level))
 	}
-}
-
-func printSubjects(ctx context.Context, subjectsApi gus.SubjectsApi) {
-
 }

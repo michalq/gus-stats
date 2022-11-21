@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"time"
 
+	"github.com/michalq/gus-stats/internal/limiter"
 	gus "github.com/michalq/gus-stats/pkg/client_gus"
-	"golang.org/x/time/rate"
 )
 
 type Downloader struct {
@@ -18,26 +18,28 @@ func NewDownloader(subjectsApi gus.SubjectsApi) *Downloader {
 }
 
 func (d *Downloader) FindAllSubjects(ctx context.Context) ([]Branch, error) {
-	// <-ctx.Done()
+	ctx, done := context.WithCancel(ctx)
 	branches := make([]Branch, 0)
 	branchesChan := make(chan Branch, 100)
 	branchesChan <- NewRootSubjectBranch()
-	limiter1s := rate.NewLimiter(rate.Every(1*time.Second), 5)
-	limiter15m := rate.NewLimiter(rate.Every(15*time.Minute), 100)
-	limiter12h := rate.NewLimiter(rate.Every(12*time.Hour), 1000)
-	limiter7d := rate.NewLimiter(rate.Every(7*24*time.Hour), 10000)
+
+	limit1s := limiter.NewLimit(5, 1*time.Second)
+	limit15m := limiter.NewLimit(100, 15*time.Minute)
+	limit12h := limiter.NewLimit(1000, 12*time.Hour)
+	limit7d := limiter.NewLimit(10000, 7*24*time.Hour)
+
 	for branch := range branchesChan {
-		limiter1s.Wait(ctx)
-		limiter15m.Wait(ctx)
-		limiter12h.Wait(ctx)
-		limiter7d.Wait(ctx)
+		limit1s.Wait(ctx)
+		limit15m.Wait(ctx)
+		limit12h.Wait(ctx)
+		limit7d.Wait(ctx)
 
 		fmt.Println("Processing children")
 
-		time.Sleep(2 * time.Second)
 		branches = append(branches, branch)
 		go d.findChildren(ctx, branch, branchesChan)
 	}
+	done()
 	return branches, nil
 }
 
@@ -49,7 +51,6 @@ func (d *Downloader) findChildren(
 	if !parent.HasChildren() {
 		return
 	}
-	// TODO Stop if no children more
 	subjectsRequest := d.subjectsApi.SubjectsGet(ctx)
 	if parent.IsRoot() {
 		subjectsRequest = d.subjectsApi.SubjectsGet(ctx).ParentId(parent.Id())
