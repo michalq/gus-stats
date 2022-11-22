@@ -1,0 +1,642 @@
+{
+    "id": "",
+    "name": "",
+    "variables": false,
+    "children":
+    [
+        {
+            "id": "K15",
+            "name": "CENY",
+            "variables": false,
+            "children":
+            [
+                {
+                    "id": "G186",
+                    "name": "CENY W ROLNICTWIE",
+                    "variables": false,
+                    "children":
+                    [
+                        {
+                            "id": "P3415",
+                            "name": "Cena zakupu/sprzedaży użytków rolnych za 1 ha w obrocie prywatnym",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3183",
+                            "name": "Cena zakupu/sprzedaży użytków rolnych za 1 ha w obrocie prywatnym (dane kwartalne)",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P1460",
+                            "name": "Przeciętne ceny gruntów ornych (za 1ha) w obrocie prywatnym",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3156",
+                            "name": "Przeciętne ceny owoców i warzyw uzyskiwane przez rolników na targowiskach (dane półroczne)",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3155",
+                            "name": "Przeciętne ceny skupu owoców i warzyw (dane półroczne)",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P1458",
+                            "name": "Przeciętne ceny skupu produktów rolnych",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2967",
+                            "name": "Przeciętne ceny skupu ważniejszych produktów rolnych (dane miesięczne)",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P1459",
+                            "name": "Przeciętne ceny uzyskiwane przez rolników na targowiskach",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2968",
+                            "name": "Przeciętne ceny uzyskiwane przez rolników na targowiskach (dane miesięczne)",
+                            "variables": true,
+                            "children": null
+                        }
+                    ]
+                },
+                {
+                    "id": "G188",
+                    "name": "PRZECIĘTNE CENY DETALICZNE TOWARÓW I USŁUG KONSUMPCYJNYCH",
+                    "variables": false,
+                    "children":
+                    [
+                        {
+                            "id": "P2917",
+                            "name": "Ceny detaliczne wybranych towarów i usług konsumpcyjnych (dane miesięczne)",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P1473",
+                            "name": "Inne towary i usługi",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P1469",
+                            "name": "Mieszkanie",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P1467",
+                            "name": "Napoje alkoholowe i wyroby tytoniowe",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P1468",
+                            "name": "Odzież i obuwie",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P1472",
+                            "name": "Rekreacja i kultura",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P1471",
+                            "name": "Transport",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P1470",
+                            "name": "Zdrowie",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P1466",
+                            "name": "Żywność i napoje bezalkoholowe",
+                            "variables": true,
+                            "children": null
+                        }
+                    ]
+                },
+                {
+                    "id": "G189",
+                    "name": "PRZECIĘTNE CENY DETALICZNE TOWARÓW NIEKONSUMPCYJNYCH",
+                    "variables": false,
+                    "children": null
+                },
+                {
+                    "id": "G187",
+                    "name": "PRZECIĘTNE CENY PRODUCENTÓW NIEKTÓRYCH WYROBÓW SPOŻYWCZYCH NA RYNKU KRAJOWYM",
+                    "variables": false,
+                    "children":
+                    [
+                        {
+                            "id": "P1462",
+                            "name": "Przetwory",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P1464",
+                            "name": "Tłuszcze i nabiał",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P1463",
+                            "name": "Wyroby mięsne",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P1465",
+                            "name": "Wyroby pozostałe",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P1461",
+                            "name": "Wyroby zbożowe",
+                            "variables": true,
+                            "children": null
+                        }
+                    ]
+                },
+                {
+                    "id": "G405",
+                    "name": "WSKAŹNIKI CEN",
+                    "variables": false,
+                    "children":
+                    [
+                        {
+                            "id": "P2955",
+                            "name": "Wskaźnik cen towarów i usług konsumpcyjnych (pot. inflacja)",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2496",
+                            "name": "Wskaźnik cen towarów i usług konsumpcyjnych (pot. inflacja), (dane kwartalne)",
+                            "variables": true,
+                            "children": null
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "K43",
+            "name": "FINANSE PRZEDSIĘBIORSTW (DANE KWARTALNE)",
+            "variables": false,
+            "children":
+            [
+                {
+                    "id": "G576",
+                    "name": "DANE ARCHIWALNE",
+                    "variables": false,
+                    "children":
+                    [
+                        {
+                            "id": "P2561",
+                            "name": "Wyniki finansowe wg sekcji PKD 2004",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2562",
+                            "name": "Wyniki finansowe wg sektorów własności (PKD 2004)",
+                            "variables": true,
+                            "children": null
+                        }
+                    ]
+                },
+                {
+                    "id": "G418",
+                    "name": "WYNIKI FINANSOWE PRZEDSIĘBIORSTW",
+                    "variables": false,
+                    "children":
+                    [
+                        {
+                            "id": "P3869",
+                            "name": "Wyniki finansowe (PKD 2007) - wskaźniki",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2695",
+                            "name": "Wyniki finansowe wg sekcji PKD 2007",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2698",
+                            "name": "Wyniki finansowe wg sektorów własności (PKD 2007)",
+                            "variables": true,
+                            "children": null
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "K27",
+            "name": "FINANSE PUBLICZNE",
+            "variables": false,
+            "children":
+            [
+                {
+                    "id": "G569",
+                    "name": "DANE ARCHIWALNE",
+                    "variables": false,
+                    "children": null
+                },
+                {
+                    "id": "G423",
+                    "name": "DOCHODY BUDŻETÓW GMIN I MIAST NA PRAWACH POWIATU",
+                    "variables": false,
+                    "children": null
+                },
+                {
+                    "id": "G195",
+                    "name": "DOCHODY BUDŻETÓW POWIATÓW",
+                    "variables": false,
+                    "children": null
+                },
+                {
+                    "id": "G199",
+                    "name": "DOCHODY BUDŻETÓW WOJEWÓDZTW",
+                    "variables": false,
+                    "children": null
+                },
+                {
+                    "id": "G497",
+                    "name": "DOCHODY I WYDATKI BUDŻETÓW JST - WSKAŹNIKI",
+                    "variables": false,
+                    "children": null
+                },
+                {
+                    "id": "G612",
+                    "name": "Wydatki (grupa w budowie)",
+                    "variables": false,
+                    "children": null
+                },
+                {
+                    "id": "G425",
+                    "name": "WYDATKI BUDŻETÓW GMIN I MIAST NA PRAWACH POWIATU",
+                    "variables": false,
+                    "children": null
+                },
+                {
+                    "id": "G197",
+                    "name": "WYDATKI BUDŻETÓW POWIATÓW",
+                    "variables": false,
+                    "children": null
+                },
+                {
+                    "id": "G201",
+                    "name": "WYDATKI BUDŻETÓW WOJEWÓDZTW",
+                    "variables": false,
+                    "children": null
+                }
+            ]
+        },
+        {
+            "id": "K47",
+            "name": "FUNDUSZE UNIJNE (DANE PÓŁROCZNE)",
+            "variables": false,
+            "children":
+            [
+                {
+                    "id": "G608",
+                    "name": "DANE ARCHIWALNE",
+                    "variables": false,
+                    "children": null
+                },
+                {
+                    "id": "G624",
+                    "name": "FUNDUSZE UNIJNE - 2014-2020 - WSKAŹNIKI",
+                    "variables": false,
+                    "children": null
+                },
+                {
+                    "id": "G580",
+                    "name": "FUNDUSZE UNIJNE - PROW 2014-2020",
+                    "variables": false,
+                    "children": null
+                },
+                {
+                    "id": "G556",
+                    "name": "FUNDUSZE UNIJNE - SYSTEMY WSPARCIA BEZPOŚREDNIEGO",
+                    "variables": false,
+                    "children": null
+                },
+                {
+                    "id": "G587",
+                    "name": "UMOWY PARTNERSTWA - UMOWY / DECYZJE O DOFINANSOWANIE - 2014-2020",
+                    "variables": false,
+                    "children": null
+                },
+                {
+                    "id": "G589",
+                    "name": "UMOWY PARTNERSTWA - WARTOŚĆ PROJEKTÓW ZAKOŃCZONYCH (WYDATKI KWALIFIKOWALNE) - 2014-2020",
+                    "variables": false,
+                    "children": null
+                },
+                {
+                    "id": "G588",
+                    "name": "UMOWY PARTNERSTWA - WARTOŚĆ UMÓW / DECYZJI O DOFINANSOWANIE - 2014-2020",
+                    "variables": false,
+                    "children": null
+                },
+                {
+                    "id": "G586",
+                    "name": "UMOWY PARTNERSTWA - WNIOSKI O DOFINANSOWANIE - 2014-2020",
+                    "variables": false,
+                    "children": null
+                },
+                {
+                    "id": "G590",
+                    "name": "WPRYB - PO RYBY 2014-2020",
+                    "variables": false,
+                    "children": null
+                }
+            ]
+        },
+        {
+            "id": "K11",
+            "name": "GOSPODARKA MIESZKANIOWA I KOMUNALNA",
+            "variables": false,
+            "children":
+            [
+                {
+                    "id": "G59",
+                    "name": "CIEPŁOWNICTWO",
+                    "variables": false,
+                    "children": null
+                },
+                {
+                    "id": "G562",
+                    "name": "DANE ARCHIWALNE",
+                    "variables": false,
+                    "children": null
+                },
+                {
+                    "id": "G335",
+                    "name": "DODATKI MIESZKANIOWE",
+                    "variables": false,
+                    "children": null
+                },
+                {
+                    "id": "G619",
+                    "name": "GOSPODARKA GRUNTAMI POD BUDOWNICTWO MIESZKANIOWE",
+                    "variables": false,
+                    "children": null
+                },
+                {
+                    "id": "G621",
+                    "name": "KOSZTY UTRZYMANIA ZASOBÓW",
+                    "variables": false,
+                    "children": null
+                },
+                {
+                    "id": "G236",
+                    "name": "REMONTY KOMUNALNYCH ZASOBÓW MIESZKANIOWYCH",
+                    "variables": false,
+                    "children": null
+                },
+                {
+                    "id": "G402",
+                    "name": "REMONTY ZASOBÓW MIESZKANIOWYCH WEDŁUG FORM WŁASNOŚCI",
+                    "variables": false,
+                    "children": null
+                },
+                {
+                    "id": "G233",
+                    "name": "UBYTKI W ZASOBACH MIESZKANIOWYCH",
+                    "variables": false,
+                    "children": null
+                },
+                {
+                    "id": "G57",
+                    "name": "URZĄDZENIA SIECIOWE",
+                    "variables": false,
+                    "children": null
+                },
+                {
+                    "id": "G630",
+                    "name": "ZALEGŁOŚCI W OPŁATACH ZA MIESZKANIA I POSTĘPOWANIA EKSMISYJNE",
+                    "variables": false,
+                    "children": null
+                },
+                {
+                    "id": "G231",
+                    "name": "ZASOBY MIESZKANIOWE",
+                    "variables": false,
+                    "children": null
+                }
+            ]
+        },
+        {
+            "id": "K44",
+            "name": "GOSPODARKA SPOŁECZNA",
+            "variables": false,
+            "children":
+            [
+                {
+                    "id": "G568",
+                    "name": "DANE ARCHIWALNE",
+                    "variables": false,
+                    "children":
+                    [
+                        {
+                            "id": "P2849",
+                            "name": "Aktywne organizacje i stowarzyszenia - Przeciętna liczba zatrudnionych w organizacjach",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2846",
+                            "name": "Aktywne organizacje i stowarzyszenia - Wolontariusze i członkowie organizacji",
+                            "variables": true,
+                            "children": null
+                        }
+                    ]
+                },
+                {
+                    "id": "G629",
+                    "name": "REINTEGRACJA SPOŁECZNO-ZAWODOWA",
+                    "variables": false,
+                    "children": null
+                },
+                {
+                    "id": "G446",
+                    "name": "SEKTOR NON-PROFIT",
+                    "variables": false,
+                    "children": null
+                }
+            ]
+        },
+        {
+            "id": "K16",
+            "name": "HANDEL I GASTRONOMIA",
+            "variables": false,
+            "children":
+            [
+                {
+                    "id": "G566",
+                    "name": "DANE ARCHIWALNE",
+                    "variables": false,
+                    "children": null
+                },
+                {
+                    "id": "G190",
+                    "name": "PLACÓWKI GASTRONOMICZNE",
+                    "variables": false,
+                    "children": null
+                },
+                {
+                    "id": "G64",
+                    "name": "SKLEPY I STACJE PALIW",
+                    "variables": false,
+                    "children": null
+                },
+                {
+                    "id": "G67",
+                    "name": "SPRZEDAŻ DETALICZNA",
+                    "variables": false,
+                    "children": null
+                },
+                {
+                    "id": "G66",
+                    "name": "SPRZEDAŻ HURTOWA",
+                    "variables": false,
+                    "children": null
+                },
+                {
+                    "id": "G65",
+                    "name": "TARGOWISKA",
+                    "variables": false,
+                    "children": null
+                }
+            ]
+        },
+        {
+            "id": "K28",
+            "name": "INWESTYCJE I ŚRODKI TRWAŁE",
+            "variables": false,
+            "children":
+            [
+                {
+                    "id": "G567",
+                    "name": "DANE ARCHIWALNE",
+                    "variables": false,
+                    "children": null
+                },
+                {
+                    "id": "G278",
+                    "name": "NAKŁADY INWESTYCYJNE",
+                    "variables": false,
+                    "children": null
+                },
+                {
+                    "id": "G438",
+                    "name": "NAKŁADY INWESTYCYJNE I ŚRODKI TRWAŁE W PRZEDSIĘBIORSTWACH WG PKD 2007",
+                    "variables": false,
+                    "children": null
+                },
+                {
+                    "id": "G277",
+                    "name": "RZECZOWY MAJĄTEK TRWAŁY",
+                    "variables": false,
+                    "children": null
+                },
+                {
+                    "id": "G539",
+                    "name": "ŹRÓDŁA FINANSOWANIA NAKŁADÓW INWESTYCYJNYCH W PRZEDSIĘBIORSTWACH",
+                    "variables": false,
+                    "children": null
+                }
+            ]
+        },
+        {
+            "id": "K23",
+            "name": "KULTURA ",
+            "variables": false,
+            "children":
+            [
+                {
+                    "id": "G226",
+                    "name": "BIBLIOTEKI",
+                    "variables": false,
+                    "children": null
+                },
+                {
+                    "id": "G370",
+                    "name": "DZIAŁALNOŚĆ CENTRÓW, DOMÓW, OŚRODKÓW KULTURY, KLUBÓW I ŚWIETLIC",
+                    "variables": false,
+                    "children": null
+                },
+                {
+                    "id": "G229",
+                    "name": "DZIAŁALNOŚĆ SCENICZNA I WYSTAWIENNICZA",
+                    "variables": false,
+                    "children": null
+                },
+                {
+                    "id": "G227",
+                    "name": "KINA",
+                    "variables": false,
+                    "children": null
+                },
+                {
+                    "id": "G228",
+                    "name": "MUZEA",
+                    "variables": false,
+                    "children": null
+                },
+                {
+                    "id": "G533",
+                    "name": "ORGANIZACJA IMPREZ MASOWYCH",
+                    "variables": false,
+                    "children": null
+                },
+                {
+                    "id": "G617",
+                    "name": "WYDAWNICTWA",
+                    "variables": false,
+                    "children": null
+                }
+            ]
+        },
+        {
+            "id": "K24",
+            "name": "KULTURA FIZYCZNA, SPORT I REKREACJA",
+            "variables": false,
+            "children":
+            [
+                {
+                    "id": "G334",
+                    "name": "SPORT",
+                    "variables": false,
+                    "children": null
+                }
+            ]
+        }
+    ]
+}
