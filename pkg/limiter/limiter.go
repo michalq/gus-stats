@@ -69,13 +69,14 @@ func (l *Limit) wait(ctx context.Context) {
 	if len(l.lockChan) > 0 {
 		select {
 		case <-l.unlockChan:
-			// Wait for unlock
 			// Reset lock channel
 			<-l.lockChan
 		case <-ctx.Done():
 			// Release locks, set to done.
 			<-l.lockChan
-			<-l.unlockChan
+			if len(l.unlockChan) > 0 {
+				<-l.unlockChan
+			}
 			l.isDone = true
 		}
 	}
