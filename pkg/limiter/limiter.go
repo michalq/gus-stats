@@ -8,7 +8,7 @@ import (
 )
 
 type Limiter interface {
-	Wait()
+	Wait(context.Context)
 }
 
 type Limit struct {
@@ -21,15 +21,17 @@ type Limit struct {
 	unlockChan chan struct{}
 	firstCall  bool
 	isDone     bool
+	debugMode  bool
 }
 
-func NewLimit(limit int, duration time.Duration) *Limit {
+func newLimit(limit int, duration time.Duration, debug bool) *Limit {
 	return &Limit{
 		counter:    0,
 		limit:      limit,
 		duration:   duration,
 		firstCall:  true,
 		isDone:     false,
+		debugMode:  debug,
 		lockChan:   make(chan struct{}, 1),
 		unlockChan: make(chan struct{}, 1),
 	}
@@ -47,10 +49,10 @@ func (l *Limit) up() {
 			l.mtx.Lock()
 			l.counter = 0
 			if len(l.unlockChan) == 0 {
-				l.debug("Unlocking, time elapsed <Duration: %s, Limit: %d>\n", l.duration, l.limit)
+				l.debug("Unlocking, time elapsed <Duration: %s, Limit: %d>", l.duration, l.limit)
 				l.unlockChan <- struct{}{}
 			} else {
-				l.debug("Waiting for unlock <Duration: %s, Limit: %d>\n", l.duration, l.limit)
+				l.debug("Waiting for unlock <Duration: %s, Limit: %d>", l.duration, l.limit)
 			}
 			l.mtx.Unlock()
 		}
@@ -58,8 +60,8 @@ func (l *Limit) up() {
 }
 
 func (l *Limit) debug(s string, params ...any) {
-	if false {
-		fmt.Printf(s, params...)
+	if l.debugMode {
+		fmt.Printf("[%s] %s\n", time.Now(), fmt.Sprintf(s, params...))
 	}
 }
 
@@ -71,6 +73,9 @@ func (l *Limit) wait(ctx context.Context) {
 			// Reset lock channel
 			<-l.lockChan
 		case <-ctx.Done():
+			// Release locks, set to done.
+			<-l.lockChan
+			<-l.unlockChan
 			l.isDone = true
 		}
 	}
@@ -84,7 +89,7 @@ func (l *Limit) Wait(ctx context.Context) {
 	l.mtx.Lock()
 	l.counter++
 	if l.counter >= l.limit {
-		l.debug("Locking: limit exceeded <Duration: %s, Limit: %d>\n", l.duration, l.limit)
+		l.debug("Locking: limit exceeded <Duration: %s, Limit: %d>", l.duration, l.limit)
 		l.lockChan <- struct{}{}
 	}
 	l.mtx.Unlock()

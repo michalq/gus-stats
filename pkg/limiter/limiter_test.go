@@ -6,20 +6,22 @@ import (
 	"testing"
 	"time"
 
-	"github.com/michalq/gus-stats/internal/limiter"
+	"github.com/michalq/gus-stats/pkg/limiter"
 	"github.com/stretchr/testify/assert"
 )
 
 func TestLimiter(t *testing.T) {
 	ctx := context.Background()
-	limit1s := limiter.NewLimit(3, 1*time.Second)
-	limit15m := limiter.NewLimit(6, 5*time.Second)
+	limiters := limiter.NewLimiters(
+		[]limiter.Definition{
+			{Limit: 3, Duration: 1 * time.Second},
+			{Limit: 6, Duration: 5 * time.Second},
+		},
+		true)
 
 	i := 0
 	for {
-		limit1s.Wait(ctx)
-		limit15m.Wait(ctx)
-
+		limiters.Wait(ctx)
 		i++
 		fmt.Println(i, time.Now())
 		if i > 15 {
