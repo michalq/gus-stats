@@ -34,10 +34,6 @@ func (d *Downloader[T]) FindAllNodes(ctx context.Context) ([]Branch[T], error) {
 
 		branches = append(branches, branch)
 		go d.findChildren(ctx, branch, branchesChan)
-		if i > 100 { // TODO only test
-			done()
-			return branches, nil
-		} // TODO end only test
 	}
 	done()
 	return branches, nil
