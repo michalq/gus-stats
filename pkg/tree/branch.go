@@ -1,8 +1,8 @@
 package tree
 
-type Branch[T any] interface {
+type BranchInterface[T any] interface {
 	Id() string
-	Parent() Branch[T]
+	Parent() BranchInterface[T]
 	IsRoot() bool
 	HasChildren() bool
 	SetCorrupted()
@@ -10,21 +10,21 @@ type Branch[T any] interface {
 	Value() T
 }
 
-type BranchValue interface {
+type BranchValueInterface interface {
 	Id() string
-	AppendChild(BranchValue)
+	AppendChild(BranchValueInterface)
 }
 
-type SubjectBranch[T BranchValue] struct {
+type Branch[T BranchValueInterface] struct {
 	value       T
 	corrupted   bool
 	isRoot      bool
 	hasChildren bool
-	parent      Branch[T]
+	parent      BranchInterface[T]
 }
 
-func NewSubjectBranch[T BranchValue](value T, parent Branch[T], hasChildren bool) *SubjectBranch[T] {
-	return &SubjectBranch[T]{
+func NewBranch[T BranchValueInterface](value T, parent BranchInterface[T], hasChildren bool) *Branch[T] {
+	return &Branch[T]{
 		value:       value,
 		parent:      parent,
 		corrupted:   false,
@@ -33,35 +33,35 @@ func NewSubjectBranch[T BranchValue](value T, parent Branch[T], hasChildren bool
 	}
 }
 
-// NewRootSubjectBranch creates dummy root branch, in situation where there are no specific root branch.
-func NewRootSubjectBranch[T BranchValue](value T) *SubjectBranch[T] {
-	return &SubjectBranch[T]{value: value, corrupted: false, isRoot: true, hasChildren: true}
+// NewRootBranch creates dummy root branch, in situation where there are no specific root branch.
+func NewRootBranch[T BranchValueInterface](value T) *Branch[T] {
+	return &Branch[T]{value: value, corrupted: false, isRoot: true, hasChildren: true}
 }
 
-func (s *SubjectBranch[T]) Id() string {
+func (s *Branch[T]) Id() string {
 	return s.value.Id()
 }
 
-func (s *SubjectBranch[T]) IsRoot() bool {
+func (s *Branch[T]) IsRoot() bool {
 	return s.isRoot
 }
 
-func (s *SubjectBranch[T]) Parent() Branch[T] {
+func (s *Branch[T]) Parent() BranchInterface[T] {
 	return s.parent
 }
 
-func (s *SubjectBranch[T]) SetCorrupted() {
+func (s *Branch[T]) SetCorrupted() {
 	s.corrupted = true
 }
 
-func (s *SubjectBranch[T]) UnsetCorrupted() {
+func (s *Branch[T]) UnsetCorrupted() {
 	s.corrupted = false
 }
 
-func (s *SubjectBranch[T]) HasChildren() bool {
+func (s *Branch[T]) HasChildren() bool {
 	return s.hasChildren
 }
 
-func (s *SubjectBranch[T]) Value() T {
+func (s *Branch[T]) Value() T {
 	return s.value
 }

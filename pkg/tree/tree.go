@@ -1,6 +1,6 @@
 package tree
 
-type Tree[T BranchValue] struct {
+type Tree[T BranchValueInterface] struct {
 	root T
 }
 

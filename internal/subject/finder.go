@@ -16,11 +16,11 @@ func NewFinder(subjectsApi gus.SubjectsApi) *Finder {
 	return &Finder{subjectsApi: subjectsApi}
 }
 
-func (*Finder) FindRoot() tree.Branch[*Subject] {
-	return tree.NewRootSubjectBranch(&Subject{})
+func (*Finder) FindRoot() tree.BranchInterface[*Subject] {
+	return tree.NewRootBranch(&Subject{})
 }
 
-func (f *Finder) FindChildren(ctx context.Context, parent tree.Branch[*Subject]) []tree.Branch[*Subject] {
+func (f *Finder) FindChildren(ctx context.Context, parent tree.BranchInterface[*Subject]) []tree.BranchInterface[*Subject] {
 	subjectsRequest := f.subjectsApi.SubjectsGet(ctx)
 	if !parent.IsRoot() {
 		subjectsRequest = f.subjectsApi.SubjectsGet(ctx).ParentId(parent.Id())
@@ -32,11 +32,11 @@ func (f *Finder) FindChildren(ctx context.Context, parent tree.Branch[*Subject])
 		// TODO also maybe put parent in queue again?
 		fmt.Println("ERROR!!! ", err)
 		parent.SetCorrupted()
-		return make([]tree.Branch[*Subject], 0)
+		return make([]tree.BranchInterface[*Subject], 0)
 	}
-	children := make([]tree.Branch[*Subject], 0, len(subjects.Results))
+	children := make([]tree.BranchInterface[*Subject], 0, len(subjects.Results))
 	for _, apiSubject := range subjects.Results {
-		children = append(children, tree.NewSubjectBranch(&Subject{
+		children = append(children, tree.NewBranch(&Subject{
 			ID:        *apiSubject.Id,
 			Name:      *apiSubject.Name,
 			Variables: *apiSubject.HasVariables, // TODO download variable?

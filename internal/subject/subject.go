@@ -13,6 +13,6 @@ func (s *Subject) Id() string {
 	return s.ID
 }
 
-func (s *Subject) AppendChild(child tree.BranchValue) {
+func (s *Subject) AppendChild(child tree.BranchValueInterface) {
 	s.Children = append(s.Children, child.(*Subject))
 }

@@ -14,63 +14,7 @@
                     "id": "G186",
                     "name": "CENY W ROLNICTWIE",
                     "variables": false,
-                    "children":
-                    [
-                        {
-                            "id": "P3415",
-                            "name": "Cena zakupu/sprzedaży użytków rolnych za 1 ha w obrocie prywatnym",
-                            "variables": true,
-                            "children": null
-                        },
-                        {
-                            "id": "P3183",
-                            "name": "Cena zakupu/sprzedaży użytków rolnych za 1 ha w obrocie prywatnym (dane kwartalne)",
-                            "variables": true,
-                            "children": null
-                        },
-                        {
-                            "id": "P1460",
-                            "name": "Przeciętne ceny gruntów ornych (za 1ha) w obrocie prywatnym",
-                            "variables": true,
-                            "children": null
-                        },
-                        {
-                            "id": "P3156",
-                            "name": "Przeciętne ceny owoców i warzyw uzyskiwane przez rolników na targowiskach (dane półroczne)",
-                            "variables": true,
-                            "children": null
-                        },
-                        {
-                            "id": "P3155",
-                            "name": "Przeciętne ceny skupu owoców i warzyw (dane półroczne)",
-                            "variables": true,
-                            "children": null
-                        },
-                        {
-                            "id": "P1458",
-                            "name": "Przeciętne ceny skupu produktów rolnych",
-                            "variables": true,
-                            "children": null
-                        },
-                        {
-                            "id": "P2967",
-                            "name": "Przeciętne ceny skupu ważniejszych produktów rolnych (dane miesięczne)",
-                            "variables": true,
-                            "children": null
-                        },
-                        {
-                            "id": "P1459",
-                            "name": "Przeciętne ceny uzyskiwane przez rolników na targowiskach",
-                            "variables": true,
-                            "children": null
-                        },
-                        {
-                            "id": "P2968",
-                            "name": "Przeciętne ceny uzyskiwane przez rolników na targowiskach (dane miesięczne)",
-                            "variables": true,
-                            "children": null
-                        }
-                    ]
+                    "children": null
                 },
                 {
                     "id": "G188",
@@ -144,39 +88,7 @@
                     "id": "G187",
                     "name": "PRZECIĘTNE CENY PRODUCENTÓW NIEKTÓRYCH WYROBÓW SPOŻYWCZYCH NA RYNKU KRAJOWYM",
                     "variables": false,
-                    "children":
-                    [
-                        {
-                            "id": "P1462",
-                            "name": "Przetwory",
-                            "variables": true,
-                            "children": null
-                        },
-                        {
-                            "id": "P1464",
-                            "name": "Tłuszcze i nabiał",
-                            "variables": true,
-                            "children": null
-                        },
-                        {
-                            "id": "P1463",
-                            "name": "Wyroby mięsne",
-                            "variables": true,
-                            "children": null
-                        },
-                        {
-                            "id": "P1465",
-                            "name": "Wyroby pozostałe",
-                            "variables": true,
-                            "children": null
-                        },
-                        {
-                            "id": "P1461",
-                            "name": "Wyroby zbożowe",
-                            "variables": true,
-                            "children": null
-                        }
-                    ]
+                    "children": null
                 },
                 {
                     "id": "G405",
@@ -264,31 +176,329 @@
                     "id": "G569",
                     "name": "DANE ARCHIWALNE",
                     "variables": false,
-                    "children": null
+                    "children":
+                    [
+                        {
+                            "id": "P2625",
+                            "name": "Dochody budżetów gmin i miast na prawach powiatu - Środki na dofinansowanie zadań ze źródeł pozabudżetowych",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2626",
+                            "name": "Dochody budżetów gmin i miast na prawach powiatu - Środki z budżetu Unii Europejskiej",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P1520",
+                            "name": "Dochody budżetów powiatów - Środki na dofinansowanie zadań powiatu ze źródeł pozabudżetowych",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P1920",
+                            "name": "Dochody budżetów powiatów - Środki z budżetu Unii Europejskiej",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P1569",
+                            "name": "Dochody budżetów województw - Środki na dofinansowanie zadań województw ze źródeł pozabudżetowych",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P1922",
+                            "name": "Dochody budżetów województw - Środki z budżetu Unii Europejskiej",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2653",
+                            "name": "Wydatki budżetów gmin i miast na prawach powiatu - Wydatki na administrację samorządową",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2649",
+                            "name": "Wydatki budżetów gmin i miast na prawach powiatu - Wydatki na gospodarkę komunalną",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2650",
+                            "name": "Wydatki budżetów gmin i miast na prawach powiatu - Wydatki na gospodarkę mieszkaniową oraz niematerialne usługi komunalne",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2642",
+                            "name": "Wydatki budżetów gmin i miast na prawach powiatu - Wydatki na kulturę fizyczną i sport",
+                            "variables": true,
+                            "children": null
+                        }
+                    ]
                 },
                 {
                     "id": "G423",
                     "name": "DOCHODY BUDŻETÓW GMIN I MIAST NA PRAWACH POWIATU",
                     "variables": false,
-                    "children": null
+                    "children":
+                    [
+                        {
+                            "id": "P2632",
+                            "name": "Dochody majątkowe",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2627",
+                            "name": "Dochody na 1 mieszkańca",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2621",
+                            "name": "Dochody ogółem",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2919",
+                            "name": "Dochody ogółem wg działów Klasyfikacji Budżetowej",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2816",
+                            "name": "Dochody uzyskane w rozdziałach ***78 - Usuwanie skutków klęsk żywiołowych",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2622",
+                            "name": "Dochody własne",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2624",
+                            "name": "Dotacje",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2915",
+                            "name": "Dział 756 - Dochody od osób prawnych, od osób fizycznych i od innych jednostek nieposiadających osobowości prawnej oraz wydatki związane z ich poborem",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2913",
+                            "name": "Finansowanie i współfinansowanie programów i projektów unijnych",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2623",
+                            "name": "Subwencja ogólna",
+                            "variables": true,
+                            "children": null
+                        }
+                    ]
                 },
                 {
                     "id": "G195",
                     "name": "DOCHODY BUDŻETÓW POWIATÓW",
                     "variables": false,
-                    "children": null
+                    "children":
+                    [
+                        {
+                            "id": "P1514",
+                            "name": "Dochody budżetów powiatów",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2628",
+                            "name": "Dochody majątkowe powiatów",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2410",
+                            "name": "Dochody na 1 mieszkańca",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2921",
+                            "name": "Dochody ogółem wg działów Klasyfikacji Budżetowej",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2817",
+                            "name": "Dochody uzyskane w rozdziałach ***78 - Usuwanie skutków klęsk żywiołowych",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P1523",
+                            "name": "Dochody własne budżetów powiatów",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P1517",
+                            "name": "Dotacje",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2910",
+                            "name": "Finansowanie i współfinansowanie programów i projektów unijnych",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P1516",
+                            "name": "Subwencja ogólna",
+                            "variables": true,
+                            "children": null
+                        }
+                    ]
                 },
                 {
                     "id": "G199",
                     "name": "DOCHODY BUDŻETÓW WOJEWÓDZTW",
                     "variables": false,
-                    "children": null
+                    "children":
+                    [
+                        {
+                            "id": "P1565",
+                            "name": "Dochody budżetów województw",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2654",
+                            "name": "Dochody majątkowe (z ogółem)",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2412",
+                            "name": "Dochody na 1 mieszkańca",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2923",
+                            "name": "Dochody ogółem wg działów Klasyfikacji Budżetowej",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2818",
+                            "name": "Dochody uzyskane w rozdziałach ***78 - Usuwanie skutków klęsk żywiołowych",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P1566",
+                            "name": "Dochody własne budżetów województw",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P1570",
+                            "name": "Dotacje",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2911",
+                            "name": "Finansowanie i współfinansowanie programów i projektów unijnych",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P1567",
+                            "name": "Subwencja ogólna",
+                            "variables": true,
+                            "children": null
+                        }
+                    ]
                 },
                 {
                     "id": "G497",
                     "name": "DOCHODY I WYDATKI BUDŻETÓW JST - WSKAŹNIKI",
                     "variables": false,
-                    "children": null
+                    "children":
+                    [
+                        {
+                            "id": "P3810",
+                            "name": "Łączne wydatki gmin i powiatów na bezpieczeństwo publiczne i ochronę przeciwpożarową na mieszkańca",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3314",
+                            "name": "Środki gmin i powiatów z UE na finansowanie programów i projektów w przeliczeniu na 1 mieszkańca",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3174",
+                            "name": "Środki z UE na finansowanie programów i projektów w przeliczeniu na 1 mieszkańca",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3809",
+                            "name": "Udział dochodów JST na finansowanie i współfinansowanie programów i projektów unijnych w dochodach ogółem",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3811",
+                            "name": "Udział dochodów własnych budżetów miast na prawach powiatu w dochodach własnych budżetów gmin i miast na prawach powiatu",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3316",
+                            "name": "Udział wydatków inwestycyjnych gmin i powiatów w wydatkach ogółem",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3176",
+                            "name": "Udział wydatków inwestycyjnych JST w wydatkach ogółem",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3808",
+                            "name": "Udział wydatków JST na kulturę i ochronę dziedzictwa narodowego w wydatkach ogółem",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3305",
+                            "name": "Udział wydatków na drogi publiczne w wydatkach ogółem",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3960",
+                            "name": "Wskaźniki",
+                            "variables": true,
+                            "children": null
+                        }
+                    ]
                 },
                 {
                     "id": "G612",
@@ -300,19 +510,205 @@
                     "id": "G425",
                     "name": "WYDATKI BUDŻETÓW GMIN I MIAST NA PRAWACH POWIATU",
                     "variables": false,
-                    "children": null
+                    "children":
+                    [
+                        {
+                            "id": "P2644",
+                            "name": "Wydatki na 1 mieszkańca",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2920",
+                            "name": "Wydatki ogółem wg działów Klasyfikacji Budżetowej",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2819",
+                            "name": "Wydatki poniesione w rozdziałach ***78 - Usuwanie skutków klęsk żywiołowych",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2634",
+                            "name": "Wydatki w Dziale 010 - Rolnictwo i łowiectwo",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2635",
+                            "name": "Wydatki w Dziale 600 - Transport i łączność",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2666",
+                            "name": "Wydatki w Dziale 630 - Turystyka",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2637",
+                            "name": "Wydatki w Dziale 700 - Gospodarka mieszkaniowa",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2643",
+                            "name": "Wydatki w Dziale 750 - Administracja publiczna",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2665",
+                            "name": "Wydatki w Dziale 754 - Bezpieczeństwo publiczne i ochrona przeciwpożarowa",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2638",
+                            "name": "Wydatki w Dziale 801 - Oświata i wychowanie",
+                            "variables": true,
+                            "children": null
+                        }
+                    ]
                 },
                 {
                     "id": "G197",
                     "name": "WYDATKI BUDŻETÓW POWIATÓW",
                     "variables": false,
-                    "children": null
+                    "children":
+                    [
+                        {
+                            "id": "P2414",
+                            "name": "Wydatki na 1 mieszkańca",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P1528",
+                            "name": "Wydatki ogółem",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2922",
+                            "name": "Wydatki ogółem wg działów Klasyfikacji Budżetowej",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2820",
+                            "name": "Wydatki poniesione w rozdziałach ***78 - Usuwanie skutków klęsk żywiołowych",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P1530",
+                            "name": "Wydatki w Dziale 010 - Rolnictwo i łowiectwo",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3292",
+                            "name": "Wydatki w Dziale 020 - Leśnictwo",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P1532",
+                            "name": "Wydatki w Dziale 600 - Transport i łączność",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P1543",
+                            "name": "Wydatki w Dziale 630 - Turystyka",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P1534",
+                            "name": "Wydatki w Dziale 700 - Gospodarka mieszkaniowa",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3293",
+                            "name": "Wydatki w Dziale 710 - Działalność usługowa",
+                            "variables": true,
+                            "children": null
+                        }
+                    ]
                 },
                 {
                     "id": "G201",
                     "name": "WYDATKI BUDŻETÓW WOJEWÓDZTW",
                     "variables": false,
-                    "children": null
+                    "children":
+                    [
+                        {
+                            "id": "P1573",
+                            "name": "Dotacje",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2722",
+                            "name": "Wydatki bieżące",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P1572",
+                            "name": "Wydatki bieżące jednostek budżetowych",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2416",
+                            "name": "Wydatki na 1 mieszkańca",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P1574",
+                            "name": "Wydatki na obsługę długu (obsługa długu publicznego bez wypłat z tytułu gwarancji i poręczeń)",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2924",
+                            "name": "Wydatki ogółem wg działów Klasyfikacji Budżetowej",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2821",
+                            "name": "Wydatki poniesione w rozdziałach ***78 - Usuwanie skutków klęsk żywiołowych",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P1577",
+                            "name": "Wydatki w Dziale 010 - Rolnictwo i łowiectwo",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P1579",
+                            "name": "Wydatki w Dziale 600 - Transport i łączność",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P1581",
+                            "name": "Wydatki w Dziale 700 - Gospodarka mieszkaniowa",
+                            "variables": true,
+                            "children": null
+                        }
+                    ]
                 }
             ]
         },
@@ -326,43 +722,351 @@
                     "id": "G608",
                     "name": "DANE ARCHIWALNE",
                     "variables": false,
-                    "children": null
+                    "children":
+                    [
+                        {
+                            "id": "P3376",
+                            "name": "NSRO PODPISANE UMOWY O DOFINANSOWANIE - 2007-2013 - Podpisane umowy o dofinansowanie wg programów operacyjnych",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3377",
+                            "name": "NSRO PODPISANE UMOWY O DOFINANSOWANIE - 2007-2013 - Program Operacyjny Infrastruktura i Środowisko wg osi priorytetowych",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3378",
+                            "name": "NSRO PODPISANE UMOWY O DOFINANSOWANIE - 2007-2013 - Program Operacyjny Innowacyjna Gospodarka wg osi priorytetowych",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3379",
+                            "name": "NSRO PODPISANE UMOWY O DOFINANSOWANIE - 2007-2013 - Program Operacyjny Kapitał Ludzki wg osi priorytetowych",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3380",
+                            "name": "NSRO PODPISANE UMOWY O DOFINANSOWANIE - 2007-2013 - Program Operacyjny Pomoc Techniczna wg osi priorytetowych",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3381",
+                            "name": "NSRO PODPISANE UMOWY O DOFINANSOWANIE - 2007-2013 - Program Operacyjny Rozwój Polski Wschodniej wg osi priorytetowych",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3382",
+                            "name": "NSRO PODPISANE UMOWY O DOFINANSOWANIE - 2007-2013 - RPO Województwa Dolnośląskiego wg osi priorytetowych",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3383",
+                            "name": "NSRO PODPISANE UMOWY O DOFINANSOWANIE - 2007-2013 - RPO Województwa Kujawsko-Pomorskiego wg osi priorytetowych",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3384",
+                            "name": "NSRO PODPISANE UMOWY O DOFINANSOWANIE - 2007-2013 - RPO Województwa Lubelskiego wg osi priorytetowych",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3385",
+                            "name": "NSRO PODPISANE UMOWY O DOFINANSOWANIE - 2007-2013 - RPO Województwa Lubuskiego wg osi priorytetowych",
+                            "variables": true,
+                            "children": null
+                        }
+                    ]
                 },
                 {
                     "id": "G624",
                     "name": "FUNDUSZE UNIJNE - 2014-2020 - WSKAŹNIKI",
                     "variables": false,
-                    "children": null
+                    "children":
+                    [
+                        {
+                            "id": "P3994",
+                            "name": "Fundusze Unijne - 2014-2020 - wskaźniki",
+                            "variables": true,
+                            "children": null
+                        }
+                    ]
                 },
                 {
                     "id": "G580",
                     "name": "FUNDUSZE UNIJNE - PROW 2014-2020",
                     "variables": false,
-                    "children": null
+                    "children":
+                    [
+                        {
+                            "id": "P3877",
+                            "name": "Beneficjenci w ramach PROW 2014-2020",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3879",
+                            "name": "Dofinansowanie ze środków krajowych w ramach PROW 2014-2020",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3880",
+                            "name": "Dofinansowanie ze środków Unii Europejskiej w ramach PROW 2014-2020",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3878",
+                            "name": "Kwota zrealizowanych płatności ogółem w ramach PROW 2014-2020",
+                            "variables": true,
+                            "children": null
+                        }
+                    ]
                 },
                 {
                     "id": "G556",
                     "name": "FUNDUSZE UNIJNE - SYSTEMY WSPARCIA BEZPOŚREDNIEGO",
                     "variables": false,
-                    "children": null
+                    "children":
+                    [
+                        {
+                            "id": "P3318",
+                            "name": "Płatności narastająco dla Kampanii 2007-2020",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3578",
+                            "name": "Płatności w ramach jednej Kampanii",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3577",
+                            "name": "Powierzchnia/ilość objęta wnioskami o przyznanie płatności w ramach jednej Kampanii",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3576",
+                            "name": "Wnioski o przyznanie płatności w ramach jednej Kampanii",
+                            "variables": true,
+                            "children": null
+                        }
+                    ]
                 },
                 {
                     "id": "G587",
                     "name": "UMOWY PARTNERSTWA - UMOWY / DECYZJE O DOFINANSOWANIE - 2014-2020",
                     "variables": false,
-                    "children": null
+                    "children":
+                    [
+                        {
+                            "id": "P3638",
+                            "name": "Liczba umów / decyzji o dofinansowanie wg programów operacyjnych",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3639",
+                            "name": "Program Operacyjny Infrastruktura i Środowisko wg osi priorytetowych",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3640",
+                            "name": "Program Operacyjny Inteligentny Rozwój wg osi priorytetowych",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3641",
+                            "name": "Program Operacyjny Polska Cyfrowa wg osi priorytetowych",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3642",
+                            "name": "Program Operacyjny Polska Wschodnia wg osi priorytetowych",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3643",
+                            "name": "Program Operacyjny Pomoc Techniczna wg osi priorytetowych",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3689",
+                            "name": "Program Operacyjny Wiedza Edukacja Rozwój wg osi priorytetowych",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3644",
+                            "name": "RPO Województwa Dolnośląskiego wg osi priorytetowych",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3645",
+                            "name": "RPO Województwa Kujawsko-Pomorskiego wg osi priorytetowych",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3646",
+                            "name": "RPO Województwa Lubelskiego wg osi priorytetowych",
+                            "variables": true,
+                            "children": null
+                        }
+                    ]
                 },
                 {
                     "id": "G589",
                     "name": "UMOWY PARTNERSTWA - WARTOŚĆ PROJEKTÓW ZAKOŃCZONYCH (WYDATKI KWALIFIKOWALNE) - 2014-2020",
                     "variables": false,
-                    "children": null
+                    "children":
+                    [
+                        {
+                            "id": "P3708",
+                            "name": "Program Operacyjny Infrastruktura i Środowisko wg osi priorytetowych i źródeł finansowania",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3709",
+                            "name": "Program Operacyjny Inteligentny Rozwój wg osi priorytetowych i źródeł finansowania",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3710",
+                            "name": "Program Operacyjny Polska Cyfrowa wg osi priorytetowych i źródeł finansowania",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3711",
+                            "name": "Program Operacyjny Polska Wschodnia wg osi priorytetowych i źródeł finansowania",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3712",
+                            "name": "Program Operacyjny Pomoc Techniczna wg osi priorytetowych i źródeł finansowania",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3713",
+                            "name": "Program Operacyjny Wiedza Edukacja Rozwój wg osi priorytetowych i źródeł finansowania",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3714",
+                            "name": "RPO Województwa Dolnośląskiego wg osi priorytetowych i źródeł finansowania",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3715",
+                            "name": "RPO Województwa Kujawsko-Pomorskiego wg osi priorytetowych i źródeł finansowania",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3716",
+                            "name": "RPO Województwa Lubelskiego wg osi priorytetowych i źródeł finansowania",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3717",
+                            "name": "RPO Województwa Lubuskiego wg osi priorytetowych i źródeł finansowania",
+                            "variables": true,
+                            "children": null
+                        }
+                    ]
                 },
                 {
                     "id": "G588",
                     "name": "UMOWY PARTNERSTWA - WARTOŚĆ UMÓW / DECYZJI O DOFINANSOWANIE - 2014-2020",
                     "variables": false,
-                    "children": null
+                    "children":
+                    [
+                        {
+                            "id": "P3683",
+                            "name": "Program Operacyjny Infrastruktura i Środowisko wg osi priorytetowych i źródeł finansowania",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3684",
+                            "name": "Program Operacyjny Inteligentny Rozwój wg osi priorytetowych i źródeł finansowania",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3685",
+                            "name": "Program Operacyjny Polska Cyfrowa wg osi priorytetowych i źródeł finansowania",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3686",
+                            "name": "Program Operacyjny Polska Wschodnia wg osi priorytetowych i źródeł finansowania",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3687",
+                            "name": "Program Operacyjny Pomoc Techniczna wg osi priorytetowych i źródeł finansowania",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3690",
+                            "name": "Program Operacyjny Wiedza Edukacja Rozwój wg osi priorytetowych i źródeł finansowania",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3691",
+                            "name": "RPO Województwa Dolnośląskiego wg osi priorytetowych i źródeł finansowania",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3692",
+                            "name": "RPO Województwa Kujawsko-Pomorskiego wg osi priorytetowych i źródeł finansowania",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3693",
+                            "name": "RPO Województwa Lubelskiego wg osi priorytetowych i źródeł finansowania",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3694",
+                            "name": "RPO Województwa Lubuskiego wg osi priorytetowych i źródeł finansowania",
+                            "variables": true,
+                            "children": null
+                        }
+                    ]
                 },
                 {
                     "id": "G586",
@@ -388,7 +1092,57 @@
                     "id": "G59",
                     "name": "CIEPŁOWNICTWO",
                     "variables": false,
-                    "children": null
+                    "children":
+                    [
+                        {
+                            "id": "P3544",
+                            "name": "Kotłownie i sieć cieplna wg form własności i lokalizacji",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3542",
+                            "name": "Kotłownie i sieć cieplna wg lokalizacji",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3545",
+                            "name": "Kubatura budynków ogrzewanych centralnie wg jednostki ogrzewającej i lokalizacji",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3543",
+                            "name": "Kubatura budynków ogrzewanych centralnie wg lokalizacji",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3770",
+                            "name": "Sieć cieplna w  jednostkach koncesjonowanych",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3541",
+                            "name": "Sprzedaż energii cieplnej w ciągu roku wg lokalizacji",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3529",
+                            "name": "Sprzedaż energii cieplnej w przeliczeniu na kubaturę budynków mieszkalnych",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P4064",
+                            "name": "Urządzenia zainstalowane w kotłowniach chroniące atmosferę przed emisją zanieczyszczeń",
+                            "variables": true,
+                            "children": null
+                        }
+                    ]
                 },
                 {
                     "id": "G562",
@@ -400,55 +1154,301 @@
                     "id": "G335",
                     "name": "DODATKI MIESZKANIOWE",
                     "variables": false,
-                    "children": null
+                    "children":
+                    [
+                        {
+                            "id": "P2173",
+                            "name": "Liczba i kwoty wypłaconych dodatków mieszkaniowych użytkownikom lokali",
+                            "variables": true,
+                            "children": null
+                        }
+                    ]
                 },
                 {
                     "id": "G619",
                     "name": "GOSPODARKA GRUNTAMI POD BUDOWNICTWO MIESZKANIOWE",
                     "variables": false,
-                    "children": null
+                    "children":
+                    [
+                        {
+                            "id": "P3953",
+                            "name": "Grunty pozostające w zasobie gmin pod budownictwo mieszkaniowe",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3954",
+                            "name": "Grunty przekazane/sprzedane inwestorom pod budownictwo mieszkaniowe",
+                            "variables": true,
+                            "children": null
+                        }
+                    ]
                 },
                 {
                     "id": "G621",
                     "name": "KOSZTY UTRZYMANIA ZASOBÓW",
                     "variables": false,
-                    "children": null
+                    "children":
+                    [
+                        {
+                            "id": "P3961",
+                            "name": "Koszty utrzymania mieszkań i lokali użytkowych",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3958",
+                            "name": "Koszty utrzymania zasobów lokalowych w przeliczeniu na 1 m2 powierzchni użytkowej w budynkach z lokalami mieszkalnymi",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3964",
+                            "name": "Średnie opłaty eksploatacyjne za mieszkania",
+                            "variables": true,
+                            "children": null
+                        }
+                    ]
                 },
                 {
                     "id": "G236",
                     "name": "REMONTY KOMUNALNYCH ZASOBÓW MIESZKANIOWYCH",
                     "variables": false,
-                    "children": null
+                    "children":
+                    [
+                        {
+                            "id": "P1975",
+                            "name": "Remonty mieszkań (instalacji/elementów już istniejących)",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3614",
+                            "name": "Remonty mieszkań (związane z podwyższeniem standardu mieszkania)",
+                            "variables": true,
+                            "children": null
+                        }
+                    ]
                 },
                 {
                     "id": "G402",
                     "name": "REMONTY ZASOBÓW MIESZKANIOWYCH WEDŁUG FORM WŁASNOŚCI",
                     "variables": false,
-                    "children": null
+                    "children":
+                    [
+                        {
+                            "id": "P2468",
+                            "name": "Remonty mieszkań (instalacji/elementów już istniejących)",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2469",
+                            "name": "Remonty mieszkań (związane z podwyższeniem standardu mieszkania)",
+                            "variables": true,
+                            "children": null
+                        }
+                    ]
                 },
                 {
                     "id": "G233",
                     "name": "UBYTKI W ZASOBACH MIESZKANIOWYCH",
                     "variables": false,
-                    "children": null
+                    "children":
+                    [
+                        {
+                            "id": "P2354",
+                            "name": "Izby wg form własności mieszkań",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P1737",
+                            "name": "Mieszkania wg form własności i wyposażenia",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2353",
+                            "name": "Powierzchnia użytkowa mieszkań wg form własności",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2352",
+                            "name": "Ubytki w zasobach mieszkaniowych",
+                            "variables": true,
+                            "children": null
+                        }
+                    ]
                 },
                 {
                     "id": "G57",
                     "name": "URZĄDZENIA SIECIOWE",
                     "variables": false,
-                    "children": null
+                    "children":
+                    [
+                        {
+                            "id": "P3585",
+                            "name": "Budynki mieszkalne podłączone do infrastruktury technicznej - w % ogółu budynków mieszkalnych",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3459",
+                            "name": "Długość sieci kanalizacyjnej w relacji do długości sieci wodociągowej",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P1604",
+                            "name": "Energia elektryczna w gospodarstwach domowych w miastach",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P1880",
+                            "name": "Energia elektryczna w gospodarstwach domowych wg lokalizacji odbiorcy",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P1601",
+                            "name": "Kanalizacja",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2433",
+                            "name": "Korzystający z instalacji w % ogółu ludności",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2877",
+                            "name": "Przedsiębiorstwa świadczące usługi w gminie w badanym roku",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3458",
+                            "name": "Różnica pomiędzy odsetkiem ludności korzystającej z wodociągu i z kanalizacji wg lokalizacji",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P1603",
+                            "name": "Sieć gazowa",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2489",
+                            "name": "Sieć gazowa wg sektorów ekonomicznych",
+                            "variables": true,
+                            "children": null
+                        }
+                    ]
                 },
                 {
                     "id": "G630",
                     "name": "ZALEGŁOŚCI W OPŁATACH ZA MIESZKANIA I POSTĘPOWANIA EKSMISYJNE",
                     "variables": false,
-                    "children": null
+                    "children":
+                    [
+                        {
+                            "id": "P1734",
+                            "name": "Postępowania eksmisyjne i eksmisje z lokali mieszkalnych w zasobach gminnych",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2467",
+                            "name": "Postępowania eksmisyjne i eksmisje z lokali mieszkalnych wg form własności lokalu",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P1731",
+                            "name": "Zaległości w opłatach za mieszkania w zasobach gminnych",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2466",
+                            "name": "Zaległości w opłatach za mieszkania wg form własności",
+                            "variables": true,
+                            "children": null
+                        }
+                    ]
                 },
                 {
                     "id": "G231",
                     "name": "ZASOBY MIESZKANIOWE",
                     "variables": false,
-                    "children": null
+                    "children":
+                    [
+                        {
+                            "id": "P2909",
+                            "name": "Budynki mieszkalne w gminie",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3952",
+                            "name": "Gospodarstwa domowe oczekujące na najem lokali mieszkalnych i tymczasowych pomieszczeń",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2908",
+                            "name": "Mieszkania niezamieszkane w zasobie gminy (pustostany)",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3966",
+                            "name": "Mieszkania niezamieszkane wg form własności",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P1728",
+                            "name": "Mieszkania w budynkach (gminnych) zwrócone dawnym indywidualnym właścicielom bądź spadkobiercom",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2431",
+                            "name": "Mieszkania wyposażone w instalacje - w % ogółu mieszkań",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P1732",
+                            "name": "Mieszkania wyposażone w instalacje techniczno-sanitarne",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3950",
+                            "name": "Najem lokali z mieszkaniowego zasobu gmin oraz tymczasowych pomieszczeń",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2166",
+                            "name": "Zasoby mieszkaniowe",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2430",
+                            "name": "Zasoby mieszkaniowe - wskaźniki",
+                            "variables": true,
+                            "children": null
+                        }
+                    ]
                 }
             ]
         },
@@ -482,13 +1482,113 @@
                     "id": "G629",
                     "name": "REINTEGRACJA SPOŁECZNO-ZAWODOWA",
                     "variables": false,
-                    "children": null
+                    "children":
+                    [
+                        {
+                            "id": "P4061",
+                            "name": "Jednostki reintegracyjne - wskaźniki",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P4054",
+                            "name": "Jednostki reintegracyjne według podmiotu prowadzącego",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P4052",
+                            "name": "Jednostki reintegracyjne według rodzaju",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P4055",
+                            "name": "Uczestnicy Centrów integracji społecznej",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P4056",
+                            "name": "Uczestnicy warsztatów terapii zajęciowej",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P4057",
+                            "name": "Zatrudnieni w zakładach aktywności zawodowej",
+                            "variables": true,
+                            "children": null
+                        }
+                    ]
                 },
                 {
                     "id": "G446",
                     "name": "SEKTOR NON-PROFIT",
                     "variables": false,
-                    "children": null
+                    "children":
+                    [
+                        {
+                            "id": "P3527",
+                            "name": "Członkostwo w organizacjach",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2827",
+                            "name": "Organizacje według formy prawnej i organizacyjnej",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3528",
+                            "name": "Organizacje według głównej dziedziny działalności",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2829",
+                            "name": "Organizacje według klasy przychodów",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2828",
+                            "name": "Organizacje według klasy zatrudnienia",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2844",
+                            "name": "Organizacje według maksymalnego terytorialnego zasięgu głównej działalności",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2845",
+                            "name": "Organizacje według rodzaju działalności",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2842",
+                            "name": "Organizacje według rodzaju i udziału",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2843",
+                            "name": "Organizacje według typu gminy",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2848",
+                            "name": "Praca płatna w organizacjach",
+                            "variables": true,
+                            "children": null
+                        }
+                    ]
                 }
             ]
         },
@@ -502,19 +1602,85 @@
                     "id": "G566",
                     "name": "DANE ARCHIWALNE",
                     "variables": false,
-                    "children": null
+                    "children":
+                    [
+                        {
+                            "id": "P1923",
+                            "name": "Magazyny handlowe hurtowe i rozdzielcze detalu wg PKD 2004",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P1475",
+                            "name": "Placówki gastronomiczne stałe i sezonowe",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P1626",
+                            "name": "Sklepy wg sektorów własności",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P1631",
+                            "name": "Sprzedaż hurtowa wg PKD 2004",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P1628",
+                            "name": "Stacje paliw",
+                            "variables": true,
+                            "children": null
+                        }
+                    ]
                 },
                 {
                     "id": "G190",
                     "name": "PLACÓWKI GASTRONOMICZNE",
                     "variables": false,
-                    "children": null
+                    "children":
+                    [
+                        {
+                            "id": "P2505",
+                            "name": "Liczba placówek gastronomicznych",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P1476",
+                            "name": "Przychody z działalności gastronomicznej",
+                            "variables": true,
+                            "children": null
+                        }
+                    ]
                 },
                 {
                     "id": "G64",
                     "name": "SKLEPY I STACJE PALIW",
                     "variables": false,
-                    "children": null
+                    "children":
+                    [
+                        {
+                            "id": "P2324",
+                            "name": "Liczba mieszkańców na 1 sklep",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2323",
+                            "name": "Sklepy i stacje paliw",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2774",
+                            "name": "Sklepy wg form organizacyjnych",
+                            "variables": true,
+                            "children": null
+                        }
+                    ]
                 },
                 {
                     "id": "G67",
@@ -526,7 +1692,27 @@
                     "id": "G66",
                     "name": "SPRZEDAŻ HURTOWA",
                     "variables": false,
-                    "children": null
+                    "children":
+                    [
+                        {
+                            "id": "P3433",
+                            "name": "Dynamika sprzedaży hurtowej w przedsiębiorstwach handlowych",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2859",
+                            "name": "Magazyny handlowe hurtowe i rozdzielcze detalu wg PKD 2007",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2841",
+                            "name": "Sprzedaż hurtowa wg PKD 2007",
+                            "variables": true,
+                            "children": null
+                        }
+                    ]
                 },
                 {
                     "id": "G65",
@@ -552,13 +1738,65 @@
                     "id": "G278",
                     "name": "NAKŁADY INWESTYCYJNE",
                     "variables": false,
-                    "children": null
+                    "children":
+                    [
+                        {
+                            "id": "P3450",
+                            "name": "Nakłady inwestycyjne - wskaźniki",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2417",
+                            "name": "Nakłady inwestycyjne na 1 mieszkańca",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2734",
+                            "name": "Nakłady inwestycyjne wg sekcji PKD 2007 (dane kwartalne)",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2733",
+                            "name": "Nakłady inwestycyjne wg środków trwałych - PKD 2007 (dane kwartalne)",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2854",
+                            "name": "Wartość nakładów inwestycyjnych w gospodarce narodowej wg sekcji PKD 2007",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P1858",
+                            "name": "Wartość nakładów inwestycyjnych wg sektorów gospodarki narodowej",
+                            "variables": true,
+                            "children": null
+                        }
+                    ]
                 },
                 {
                     "id": "G438",
                     "name": "NAKŁADY INWESTYCYJNE I ŚRODKI TRWAŁE W PRZEDSIĘBIORSTWACH WG PKD 2007",
                     "variables": false,
-                    "children": null
+                    "children":
+                    [
+                        {
+                            "id": "P2862",
+                            "name": "Nakłady inwestycyjne i wartość brutto środków trwałych",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2755",
+                            "name": "Nakłady inwestycyjne i wartość brutto środków trwałych - wskaźniki",
+                            "variables": true,
+                            "children": null
+                        }
+                    ]
                 },
                 {
                     "id": "G277",
@@ -570,7 +1808,15 @@
                     "id": "G539",
                     "name": "ŹRÓDŁA FINANSOWANIA NAKŁADÓW INWESTYCYJNYCH W PRZEDSIĘBIORSTWACH",
                     "variables": false,
-                    "children": null
+                    "children":
+                    [
+                        {
+                            "id": "P3445",
+                            "name": "Źródła finansowania nakładów inwestycyjnych w przedsiębiorstwach",
+                            "variables": true,
+                            "children": null
+                        }
+                    ]
                 }
             ]
         },
@@ -590,7 +1836,69 @@
                     "id": "G370",
                     "name": "DZIAŁALNOŚĆ CENTRÓW, DOMÓW, OŚRODKÓW KULTURY, KLUBÓW I ŚWIETLIC",
                     "variables": false,
-                    "children": null
+                    "children":
+                    [
+                        {
+                            "id": "P2284",
+                            "name": "Centra, domy i ośrodki kultury, kluby i świetlice",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3221",
+                            "name": "Centra, domy i ośrodki kultury, kluby i świetlice ogółem i wg organizatorów",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3760",
+                            "name": "Centra, domy i ośrodki kultury, kluby i świetlice wg powiatów",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3904",
+                            "name": "Działalność centrów, domów, ośrodków kultury, klubów i świetlic - wskaźniki",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2792",
+                            "name": "Grupy artystyczne i członkowie",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2795",
+                            "name": "Imprezy organizowane przez jednostkę i uczestnicy",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3222",
+                            "name": "Infrastruktura centrów, domów i ośrodków kultury, klubów i świetlic",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2793",
+                            "name": "Koła / kluby / sekcje i członkowie",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P2794",
+                            "name": "Kursy organizowane przez jednostkę",
+                            "variables": true,
+                            "children": null
+                        },
+                        {
+                            "id": "P3223",
+                            "name": "Pracownie specjalistyczne działające w jednostce",
+                            "variables": true,
+                            "children": null
+                        }
+                    ]
                 },
                 {
                     "id": "G229",
@@ -628,15 +1936,7 @@
             "id": "K24",
             "name": "KULTURA FIZYCZNA, SPORT I REKREACJA",
             "variables": false,
-            "children":
-            [
-                {
-                    "id": "G334",
-                    "name": "SPORT",
-                    "variables": false,
-                    "children": null
-                }
-            ]
+            "children": null
         }
     ]
 }
