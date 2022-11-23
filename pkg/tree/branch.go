@@ -10,11 +10,6 @@ type BranchInterface[T any] interface {
 	Value() T
 }
 
-type BranchValueInterface interface {
-	Id() string
-	AppendChild(BranchValueInterface)
-}
-
 type Branch[T BranchValueInterface] struct {
 	value       T
 	corrupted   bool
