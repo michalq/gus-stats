@@ -1,7 +1,7 @@
-.PHONY: build clean run
+.PHONY: build clean subjects
 
-run:
-	go run cmd/retrieve/main.go
+subjects:
+	go run cmd/subjects/main.go
 
 OPENAPI_GENERATOR_VERSION=v6.2.1
 OPENAPI_GENERATOR=go
