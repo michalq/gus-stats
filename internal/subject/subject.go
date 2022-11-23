@@ -3,10 +3,11 @@ package subject
 import "github.com/michalq/gus-stats/pkg/tree"
 
 type Subject struct {
-	ID        string     `json:"id"`
-	Name      string     `json:"name"`
-	Variables bool       `json:"variables"`
-	Children  []*Subject `json:"children"`
+	ID          string     `json:"id"`
+	Name        string     `json:"name"`
+	Variables   bool       `json:"variables"`
+	ChildrenQty int32      `json:"childrenQuantity"`
+	Children    []*Subject `json:"children"`
 }
 
 func (s *Subject) Id() string {

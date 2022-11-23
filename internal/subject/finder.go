@@ -8,6 +8,8 @@ import (
 	"github.com/michalq/gus-stats/pkg/tree"
 )
 
+const pageSize = 100 // Should be enough the biggest parent was with 70 nodes. 100 is also the maximum number for API.
+
 type Finder struct {
 	subjectsApi gus.SubjectsApi
 }
@@ -21,7 +23,7 @@ func (*Finder) FindRoot() tree.BranchInterface[*Subject] {
 }
 
 func (f *Finder) FindChildren(ctx context.Context, parent tree.BranchInterface[*Subject]) []tree.BranchInterface[*Subject] {
-	subjectsRequest := f.subjectsApi.SubjectsGet(ctx)
+	subjectsRequest := f.subjectsApi.SubjectsGet(ctx).PageSize(pageSize)
 	if !parent.IsRoot() {
 		subjectsRequest = f.subjectsApi.SubjectsGet(ctx).ParentId(parent.Id())
 	}
@@ -34,12 +36,14 @@ func (f *Finder) FindChildren(ctx context.Context, parent tree.BranchInterface[*
 		parent.SetCorrupted()
 		return make([]tree.BranchInterface[*Subject], 0)
 	}
+
 	children := make([]tree.BranchInterface[*Subject], 0, len(subjects.Results))
 	for _, apiSubject := range subjects.Results {
 		children = append(children, tree.NewBranch(&Subject{
-			ID:        *apiSubject.Id,
-			Name:      *apiSubject.Name,
-			Variables: *apiSubject.HasVariables, // TODO download variable?
+			ID:          *apiSubject.Id,
+			Name:        *apiSubject.Name,
+			Variables:   *apiSubject.HasVariables, // TODO download variable?
+			ChildrenQty: *subjects.TotalRecords,
 		}, parent, len(apiSubject.Children) > 0))
 	}
 	return children
