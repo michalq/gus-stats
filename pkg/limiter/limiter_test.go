@@ -24,6 +24,7 @@ func TestLimiter(t *testing.T) {
 		limiters.Wait(ctx)
 		i++
 		fmt.Println(i, time.Now())
+		time.Sleep(2 * time.Second)
 		if i > 15 {
 			ctx.Done()
 			return

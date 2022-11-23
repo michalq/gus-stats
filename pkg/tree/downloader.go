@@ -3,17 +3,19 @@ package tree
 import (
 	"context"
 	"fmt"
+	"sync"
 
 	"github.com/michalq/gus-stats/pkg/limiter"
 )
 
 type Downloader[T BranchValue] struct {
+	wg           sync.WaitGroup
 	nodeDiscover NodeDiscover[T]
 	apiLimits    limiter.Limiters
 }
 
 func NewDownloader[T BranchValue](nodeDiscover NodeDiscover[T], apiLimits limiter.Limiters) *Downloader[T] {
-	return &Downloader[T]{nodeDiscover, apiLimits}
+	return &Downloader[T]{nodeDiscover: nodeDiscover, apiLimits: apiLimits}
 }
 
 func (d *Downloader[T]) findAllNodes(ctx context.Context) ([]Branch[T], error) {
@@ -21,11 +23,16 @@ func (d *Downloader[T]) findAllNodes(ctx context.Context) ([]Branch[T], error) {
 	branches := make([]Branch[T], 0)
 	branchesChan := make(chan Branch[T], 100)
 	branchesChan <- d.nodeDiscover.FindRoot()
+	d.wg.Add(1)
 	i := 0
+	go (func() {
+		d.wg.Wait()
+		close(branchesChan)
+	})()
 	for branch := range branchesChan {
 		d.apiLimits.Wait(ctx)
 		i++
-		fmt.Printf("[%d] Processing children of %s\n", i, branch.Id())
+		fmt.Printf("[%d/%d] Processing children of %s\n", i, len(branchesChan), branch.Id())
 
 		branches = append(branches, branch)
 		go d.findChildren(ctx, branch, branchesChan)
@@ -53,10 +60,12 @@ func (d *Downloader[T]) findChildren(
 	parent Branch[T],
 	branchesChan chan<- Branch[T],
 ) {
+	defer d.wg.Done()
 	if !parent.HasChildren() {
 		return
 	}
 	for _, child := range d.nodeDiscover.FindChildren(ctx, parent) {
+		d.wg.Add(1)
 		branchesChan <- child
 	}
 }
