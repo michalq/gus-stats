@@ -7,14 +7,26 @@ import (
 	"log"
 	"time"
 
+	env "github.com/Netflix/go-env"
 	"github.com/michalq/gus-stats/internal/subject"
 	gus "github.com/michalq/gus-stats/pkg/client_gus"
 	"github.com/michalq/gus-stats/pkg/limiter"
 	"github.com/michalq/gus-stats/pkg/tree"
 )
 
+type Config struct {
+	Gus struct {
+		Client string `env:"GUS_CLIENT"`
+	}
+}
+
 func main() {
 	ctx := context.Background()
+	var config Config
+	if _, err := env.UnmarshalFromEnviron(&config); err != nil {
+		log.Fatal(err)
+	}
+
 	gusConfig := gus.NewConfiguration()
 	gusConfig.Debug = false
 	gusConfig.Servers = gus.ServerConfigurations{
@@ -23,33 +35,21 @@ func main() {
 			Description: "No description provided",
 		},
 	}
-	// gusConfig.DefaultHeader["X-ClientId"] = "xyz"
+	gusConfig.DefaultHeader["X-ClientId"] = config.Gus.Client
 	gusClient := gus.NewAPIClient(gusConfig)
 
 	subjectDownloader := tree.NewDownloader[*subject.Subject](
 		subject.NewFinder(gusClient.SubjectsApi),
-		baseApiLimits(true),
+		registeredApiLimits(true),
 	)
-	subjectBranches, err := subjectDownloader.FindAllNodes(ctx)
+	subjectTree, err := subjectDownloader.Tree(ctx)
 	if err != nil {
 		log.Fatal(err)
 	}
-
-	root := makeTree(subjectBranches)
+	root := subjectTree.Root()
 	res, err := json.Marshal(root)
 	fmt.Printf("err: %+v\nres: %s\n", err, res)
 	// json marshal -> save to file
-	fmt.Println("Hello world!")
-}
-
-func makeTree(subjectBranches []tree.Branch[*subject.Subject]) *subject.Subject {
-	for _, branch := range subjectBranches {
-		if branch.Parent() != nil {
-			parent := branch.Parent().Value()
-			parent.Children = append(parent.Children, branch.Value())
-		}
-	}
-	return subjectBranches[0].Value()
 }
 
 func printAggregates(ctx context.Context, aggregatesApi gus.AggregatesApi) {

@@ -18,3 +18,9 @@ pkg/client_gus:
 		-i /local/api/openapi-gus.json \
 		-o /local/pkg/client_gus \
 		-t /local/api/tpl
+
+
+ifneq (,$(wildcard ./.env))
+    include .env
+    export
+endif

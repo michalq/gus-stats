@@ -1,1 +1,2 @@
 pkg/client_*
+.env

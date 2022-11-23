@@ -1,5 +1,7 @@
 package subject
 
+import "github.com/michalq/gus-stats/pkg/tree"
+
 type Subject struct {
 	ID        string     `json:"id"`
 	Name      string     `json:"name"`
@@ -9,4 +11,8 @@ type Subject struct {
 
 func (s *Subject) Id() string {
 	return s.ID
+}
+
+func (s *Subject) AppendChild(child tree.BranchValue) {
+	s.Children = append(s.Children, child.(*Subject))
 }

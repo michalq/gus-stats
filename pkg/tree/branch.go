@@ -12,6 +12,7 @@ type Branch[T any] interface {
 
 type BranchValue interface {
 	Id() string
+	AppendChild(BranchValue)
 }
 
 type SubjectBranch[T BranchValue] struct {
@@ -22,7 +23,7 @@ type SubjectBranch[T BranchValue] struct {
 	parent      Branch[T]
 }
 
-func NewSubjectBranch[T BranchValue](value T, parent Branch[T], hasChildren bool) Branch[T] {
+func NewSubjectBranch[T BranchValue](value T, parent Branch[T], hasChildren bool) *SubjectBranch[T] {
 	return &SubjectBranch[T]{
 		value:       value,
 		parent:      parent,
