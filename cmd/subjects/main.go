@@ -5,6 +5,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"log"
+	"os"
 
 	"github.com/michalq/gus-stats/internal/config"
 	gusClient "github.com/michalq/gus-stats/internal/gus"
@@ -28,6 +29,11 @@ func main() {
 	}
 	root := subjectTree.Root()
 	res, err := json.Marshal(root)
-	fmt.Printf("err: %+v\nres: %s\n", err, res)
-	// json marshal -> save to file
+	if err != nil {
+		log.Fatal(err)
+	}
+	if err := os.WriteFile("assets/subjects.json", res, 0644); err != nil {
+		panic(err)
+	}
+	fmt.Println("All done!")
 }
