@@ -66,6 +66,7 @@ func (l *Limit) debug(s string, params ...any) {
 }
 
 func (l *Limit) wait(ctx context.Context) {
+	// TODO Deadlock hazard between checking len() and reseting? To verify.
 	if len(l.lockChan) > 0 {
 		select {
 		case <-l.unlockChan:
