@@ -1,17 +1,16 @@
 import * as d3 from "d3";
 import subjects from './subjects.json';
 
-const chart = Tree(subjects, {
-  label: d => d.name,
-  title: (d, n) => ``,
-  link: (d, n) => ``,
-  width: 12000,
-  height: 12000,
-  margin: 100
-});
-console.log(chart.outerHTML)
-d3.select("#app").html(chart.outerHTML);
-
+for (const root of subjects.children) {
+    const chart = Tree(root, {
+        label: d => d.name,
+        title: (d, n) => ``,
+        link: (d, n) => ``,
+        width: 1500,
+      });
+      console.log(chart.outerHTML)
+      d3.select("#app").append('div').html(chart.outerHTML);
+}
 
 // Copyright 2021 Observable, Inc.
 // Released under the ISC license.
@@ -58,7 +57,7 @@ function Tree(data, { // data is either tabular (array of objects) or hierarchy 
     const L = label == null ? null : descendants.map(d => label(d.data, d));
   
     // Compute the layout.
-    const dx = 60;
+    const dx = 10;
     const dy = width / (root.height + padding);
     tree().nodeSize([dx, dy])(root);
   
@@ -79,7 +78,7 @@ function Tree(data, { // data is either tabular (array of objects) or hierarchy 
         .attr("height", height)
         .attr("style", "max-width: 100%; height: auto; height: intrinsic;")
         .attr("font-family", "sans-serif")
-        .attr("font-size", 60);
+        .attr("font-size", 10);
   
     svg.append("g")
         .attr("fill", "none")
