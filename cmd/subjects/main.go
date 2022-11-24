@@ -4,7 +4,6 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	"log"
 	"os"
 
 	"github.com/michalq/gus-stats/internal/config"
@@ -19,21 +18,21 @@ func main() {
 	cfg := config.LoadConfig()
 	client := gusClient.NewClient(cfg)
 
-	subjectDownloader := tree.NewDownloader[*subject.Subject](
+	subjectDownloader := tree.NewWalker[*subject.Subject](
 		subject.NewFinder(client.SubjectsApi),
 		gusClient.RegisteredApiLimits(true),
 	)
-	subjectTree, err := subjectDownloader.Tree(ctx)
+	subjectTree, err := subjectDownloader.Walk(ctx)
 	if err != nil {
-		log.Fatal(err)
+		panic(err)
 	}
 	root := subjectTree.Root()
 	res, err := json.Marshal(root)
 	if err != nil {
-		log.Fatal(err)
+		panic(err)
 	}
 	if err := os.WriteFile("assets/subjects.json", res, 0644); err != nil {
 		panic(err)
 	}
-	fmt.Println("All done!")
+	fmt.Println("All done!\nSee results in assets/subjects.json")
 }

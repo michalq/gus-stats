@@ -8,17 +8,17 @@ import (
 	"github.com/michalq/gus-stats/pkg/limiter"
 )
 
-type Downloader[T BranchValueInterface] struct {
+type Walker[T BranchValueInterface] struct {
 	wg           sync.WaitGroup
 	nodeDiscover NodeDiscover[T]
 	apiLimits    limiter.Limiters
 }
 
-func NewDownloader[T BranchValueInterface](nodeDiscover NodeDiscover[T], apiLimits limiter.Limiters) *Downloader[T] {
-	return &Downloader[T]{nodeDiscover: nodeDiscover, apiLimits: apiLimits}
+func NewWalker[T BranchValueInterface](nodeDiscover NodeDiscover[T], apiLimits limiter.Limiters) *Walker[T] {
+	return &Walker[T]{nodeDiscover: nodeDiscover, apiLimits: apiLimits}
 }
 
-func (d *Downloader[T]) findAllNodes(ctx context.Context) ([]BranchInterface[T], error) {
+func (d *Walker[T]) findAllNodes(ctx context.Context) ([]BranchInterface[T], error) {
 	ctx, done := context.WithCancel(ctx)
 	branches := make([]BranchInterface[T], 0)
 	branchesChan := make(chan BranchInterface[T], 100)
@@ -41,7 +41,7 @@ func (d *Downloader[T]) findAllNodes(ctx context.Context) ([]BranchInterface[T],
 	return branches, nil
 }
 
-func (d *Downloader[T]) Tree(ctx context.Context) (*Tree[T], error) {
+func (d *Walker[T]) Walk(ctx context.Context) (*Tree[T], error) {
 	nodes, err := d.findAllNodes(ctx)
 	if err != nil {
 		return nil, err
@@ -55,7 +55,7 @@ func (d *Downloader[T]) Tree(ctx context.Context) (*Tree[T], error) {
 	return &Tree[T]{root: nodes[0].Value()}, nil
 }
 
-func (d *Downloader[T]) findChildren(
+func (d *Walker[T]) findChildren(
 	ctx context.Context,
 	parent BranchInterface[T],
 	branchesChan chan<- BranchInterface[T],
