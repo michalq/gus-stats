@@ -24,6 +24,7 @@ func (f *Finder) FindAll(ctx context.Context) ([]*Variable, error) {
 	variables := make([]*Variable, 0)
 	var i int32 = 0
 	for {
+		f.limiter.Wait(ctx)
 		variablesRequest := f.variablesApi.
 			VariablesGet(ctx).
 			Format("json").
@@ -31,14 +32,14 @@ func (f *Finder) FindAll(ctx context.Context) ([]*Variable, error) {
 			Page(i)
 		list, _, err := variablesRequest.Execute()
 		if err != nil {
-			return nil, err
+			fmt.Println(err)
+			continue
 		}
 		if len(list.Results) == 0 {
 			break
 		}
 		fmt.Printf("[%s] Page %d, results %d\n", time.Now(), i, len(list.Results))
 		for _, apiVariable := range list.Results {
-			f.limiter.Wait(ctx)
 			var name string = *apiVariable.N1
 			if apiVariable.N2 != nil {
 				name += " " + *apiVariable.N2
