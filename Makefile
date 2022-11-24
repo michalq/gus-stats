@@ -3,6 +3,9 @@
 subjects:
 	go run cmd/subjects/main.go
 
+variables:
+	go run cmd/variables/main.go
+
 OPENAPI_GENERATOR_VERSION=v6.2.1
 OPENAPI_GENERATOR=go
 clean:

@@ -31,8 +31,8 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	if err := os.WriteFile("assets/subjects.json", res, 0644); err != nil {
+	if err := os.WriteFile("data/subjects.json", res, 0644); err != nil {
 		panic(err)
 	}
-	fmt.Println("All done!\nSee results in assets/subjects.json")
+	fmt.Println("All done!\nSee results in data/subjects.json")
 }
