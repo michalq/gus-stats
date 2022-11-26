@@ -1,11 +1,12 @@
 import * as d3 from "d3";
-import subjects from './subjects.json';
+import subjects from '../../../data/subjects.json';
+// import variables from '../../../data/variables.json';
 
 for (const root of subjects.children) {
     const chart = Tree(root, {
         label: d => d.name,
-        title: (d, n) => ``,
-        link: (d, n) => ``,
+        title: (d, n) => `${d.id}`,
+        link: (d, n) => `/subjects/${d.id}`,
         width: 1500,
       });
       console.log(chart.outerHTML)

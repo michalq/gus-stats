@@ -32,6 +32,7 @@ func (d *Walker[T]) findAllNodes(ctx context.Context) ([]BranchInterface[T], err
 	for branch := range branchesChan {
 		d.apiLimits.Wait(ctx)
 		i++
+		// TODO remove debug
 		fmt.Printf("[%d/%d] Processing children of %s\n", i, len(branchesChan), branch.Id())
 
 		branches = append(branches, branch)
@@ -64,7 +65,19 @@ func (d *Walker[T]) findChildren(
 	if !parent.HasChildren() {
 		return
 	}
-	for _, child := range d.nodeDiscover.FindChildren(ctx, parent) {
+	children, err := d.nodeDiscover.FindChildren(ctx, parent)
+	if err != nil {
+		parent.setCorrupted()
+
+		switch d.nodeDiscover.HandleError(parent, err) {
+		case HandleErrorRequeue:
+			// TODO requeue limit?
+			d.wg.Add(1)
+			branchesChan <- parent
+		}
+	}
+	parent.unsetCorrupted()
+	for _, child := range children {
 		d.wg.Add(1)
 		branchesChan <- child
 	}

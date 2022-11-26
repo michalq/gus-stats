@@ -22,19 +22,14 @@ func (*Finder) FindRoot() tree.BranchInterface[*Subject] {
 	return tree.NewRootBranch(&Subject{})
 }
 
-func (f *Finder) FindChildren(ctx context.Context, parent tree.BranchInterface[*Subject]) []tree.BranchInterface[*Subject] {
+func (f *Finder) FindChildren(ctx context.Context, parent tree.BranchInterface[*Subject]) ([]tree.BranchInterface[*Subject], error) {
 	subjectsRequest := f.subjectsApi.SubjectsGet(ctx).PageSize(pageSize)
 	if !parent.IsRoot() {
 		subjectsRequest = f.subjectsApi.SubjectsGet(ctx).ParentId(parent.Id())
 	}
 	subjects, _, err := subjectsRequest.Execute()
 	if err != nil {
-		// TODO send to err chan?
-		// TODO if "429 Too Many Requests" happen then lock?
-		// TODO also maybe put parent in queue again?
-		fmt.Println("ERROR!!! ", err)
-		parent.SetCorrupted()
-		return make([]tree.BranchInterface[*Subject], 0)
+		return make([]tree.BranchInterface[*Subject], 0), err
 	}
 
 	children := make([]tree.BranchInterface[*Subject], 0, len(subjects.Results))
@@ -46,5 +41,12 @@ func (f *Finder) FindChildren(ctx context.Context, parent tree.BranchInterface[*
 			ChildrenQty: *subjects.TotalRecords,
 		}, parent, len(apiSubject.Children) > 0))
 	}
-	return children
+	return children, nil
+}
+
+func (f *Finder) HandleError(parent tree.BranchInterface[*Subject], err error) tree.HandleErrorDecision {
+	// TODO if "429 Too Many Requests" happen then lock?
+	fmt.Println("ERROR!!! ", err)
+
+	return tree.HandleErrorIgnore
 }

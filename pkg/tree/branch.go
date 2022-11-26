@@ -5,8 +5,8 @@ type BranchInterface[T any] interface {
 	Parent() BranchInterface[T]
 	IsRoot() bool
 	HasChildren() bool
-	SetCorrupted()
-	UnsetCorrupted()
+	setCorrupted()
+	unsetCorrupted()
 	Value() T
 }
 
@@ -45,11 +45,11 @@ func (s *Branch[T]) Parent() BranchInterface[T] {
 	return s.parent
 }
 
-func (s *Branch[T]) SetCorrupted() {
+func (s *Branch[T]) setCorrupted() {
 	s.corrupted = true
 }
 
-func (s *Branch[T]) UnsetCorrupted() {
+func (s *Branch[T]) unsetCorrupted() {
 	s.corrupted = false
 }
 
