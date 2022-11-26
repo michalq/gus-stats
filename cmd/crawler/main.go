@@ -4,6 +4,7 @@ import (
 	"context"
 	"log"
 
+	"github.com/michalq/gus-stats/internal/cli"
 	"github.com/michalq/gus-stats/internal/config"
 	"github.com/michalq/gus-stats/internal/crawler"
 	gusClient "github.com/michalq/gus-stats/internal/gus"
@@ -42,21 +43,18 @@ func main() {
 	dataCrawler := crawler.NewCrawler(subjectDownloader, variableFinder)
 
 	flag.Parse()
+	var err error
 	// TODO add cli params, invoke specific method by cli arg
 	// TODO add s3 repository and save the result?
 	switch *resource {
 	case "subjects":
-		_, err := dataCrawler.DownloadSubjectsTree(ctx)
-		if err != nil {
-			panic(err)
-		}
+		err = cli.SubjectsHandler(ctx, dataCrawler)
 	case "variables":
-		_, err := dataCrawler.DownloadVariables(ctx)
-		if err != nil {
-			panic(err)
-		}
+		err = cli.VariablesHandler(ctx, dataCrawler)
 	default:
 		log.Fatalf("Resource not found %s, possible resources: %v", *resource, resources)
 	}
-
+	if err != nil {
+		panic(err)
+	}
 }

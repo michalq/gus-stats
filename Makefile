@@ -1,8 +1,7 @@
-.PHONY: build clean subjects
+.PHONY: build clean subjects variables
 
 subjects:
 	go run cmd/crawler/main.go --resource subjects
-
 variables:
 	go run cmd/crawler/main.go --resource variables
 
