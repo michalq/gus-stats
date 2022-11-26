@@ -31,8 +31,9 @@ func main() {
 	cfg := config.LoadConfig()
 	client := gusClient.NewClient(cfg)
 
+	subjectsFinder := subject.NewFinder(client.SubjectsApi)
 	subjectDownloader := tree.NewWalker[*subject.Subject](
-		subject.NewFinder(client.SubjectsApi),
+		subjectsFinder,
 		gusClient.RegisteredApiLimits(true),
 	)
 	variableFinder := variable.NewFinder(
@@ -48,7 +49,7 @@ func main() {
 	// TODO add s3 repository and save the result?
 	switch *resource {
 	case "subjects":
-		err = cli.SubjectsHandler(ctx, dataCrawler)
+		err = cli.SubjectsHandler(ctx, dataCrawler, subjectsFinder)
 	case "variables":
 		err = cli.VariablesHandler(ctx, dataCrawler)
 	default:

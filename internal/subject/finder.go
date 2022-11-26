@@ -3,6 +3,7 @@ package subject
 import (
 	"context"
 	"fmt"
+	"sync"
 
 	gus "github.com/michalq/gus-stats/pkg/client_gus"
 	"github.com/michalq/gus-stats/pkg/tree"
@@ -11,7 +12,9 @@ import (
 const pageSize = 100 // Should be enough the biggest parent was with 70 nodes. 100 is also the maximum number for API.
 
 type Finder struct {
-	subjectsApi gus.SubjectsApi
+	subjectsApi        gus.SubjectsApi
+	mu                 sync.Mutex
+	maxElementsPerPage int32
 }
 
 func NewFinder(subjectsApi gus.SubjectsApi) *Finder {
@@ -35,12 +38,18 @@ func (f *Finder) FindChildren(ctx context.Context, parent tree.BranchInterface[*
 	children := make([]tree.BranchInterface[*Subject], 0, len(subjects.Results))
 	for _, apiSubject := range subjects.Results {
 		children = append(children, tree.NewBranch(&Subject{
-			ID:          *apiSubject.Id,
-			Name:        *apiSubject.Name,
-			Variables:   *apiSubject.HasVariables, // TODO download variable?
-			ChildrenQty: *subjects.TotalRecords,
+			ID:        *apiSubject.Id,
+			Name:      *apiSubject.Name,
+			Variables: *apiSubject.HasVariables, // TODO download variable?
 		}, parent, len(apiSubject.Children) > 0))
 	}
+
+	records := *subjects.TotalRecords
+	f.mu.Lock()
+	if records > f.maxElementsPerPage {
+		f.maxElementsPerPage = records
+	}
+	f.mu.Unlock()
 	return children, nil
 }
 
@@ -49,4 +58,8 @@ func (f *Finder) HandleError(parent tree.BranchInterface[*Subject], err error) t
 	fmt.Println("ERROR!!! ", err)
 
 	return tree.HandleErrorIgnore
+}
+
+func (f *Finder) MaxElementsPerPage() int32 {
+	return f.maxElementsPerPage
 }
