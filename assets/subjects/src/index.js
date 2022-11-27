@@ -6,7 +6,7 @@ for (const root of subjects.children) {
     const chart = Tree(root, {
         label: d => d.name,
         title: (d, n) => `${d.id}`,
-        link: (d, n) => `/subjects/${d.id}`,
+        link: (d, n) => `http://localhost:3000/subjects/${d.id}`,
         width: 1500,
       });
       console.log(chart.outerHTML)

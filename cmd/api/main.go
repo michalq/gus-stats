@@ -42,9 +42,8 @@ func main() {
 				Id:   varId,
 				Name: gusVar.Name,
 				Links: api.VariablesResponseVariablesLinks{
-					Subjects: createApiUrl("/subjects"),
-					Subject:  createApiUrl("/subjects/%s", subjectId),
-					Data:     createApiUrl("/subjects/%s/variables/%s/data", subjectId, varId),
+					Subject: createApiUrl("/subjects/%s", subjectId),
+					Data:    createApiUrl("/subjects/%s/variables/%s/data", subjectId, varId),
 				},
 			})
 		}
