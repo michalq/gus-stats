@@ -17,7 +17,6 @@ type Limit struct {
 	mtx        sync.Mutex
 	duration   time.Duration
 	ticker     *time.Ticker
-	lockChan   chan struct{}
 	unlockChan chan struct{}
 	firstCall  bool
 	isDone     bool
@@ -32,7 +31,6 @@ func newLimit(limit int, duration time.Duration, debug bool) *Limit {
 		firstCall:  true,
 		isDone:     false,
 		debugMode:  debug,
-		lockChan:   make(chan struct{}, 1),
 		unlockChan: make(chan struct{}, 1),
 	}
 }
@@ -67,19 +65,15 @@ func (l *Limit) debug(s string, params ...any) {
 
 func (l *Limit) wait(ctx context.Context) {
 	// TODO Deadlock hazard between checking len() and reseting? To verify.
-	if len(l.lockChan) > 0 {
-		select {
-		case <-l.unlockChan:
-			// Reset lock channel
-			<-l.lockChan
-		case <-ctx.Done():
-			// Release locks, set to done.
-			<-l.lockChan
-			if len(l.unlockChan) > 0 {
-				<-l.unlockChan
-			}
-			l.isDone = true
+	select {
+	case <-l.unlockChan:
+		l.debug("Release %s", l.duration)
+		// Do nothing
+	case <-ctx.Done():
+		if len(l.unlockChan) > 0 {
+			<-l.unlockChan
 		}
+		l.isDone = true
 	}
 }
 
@@ -90,10 +84,10 @@ func (l *Limit) Wait(ctx context.Context) {
 	l.up()
 	l.mtx.Lock()
 	l.counter++
-	if l.counter >= l.limit {
-		l.debug("Locking: limit exceeded <Duration: %s, Limit: %d>", l.duration, l.limit)
-		l.lockChan <- struct{}{}
-	}
+	isLimitExceeded := l.counter >= l.limit
 	l.mtx.Unlock()
-	l.wait(ctx)
+	if isLimitExceeded {
+		l.debug("Locking: limit exceeded <Duration: %s, Limit: %d>", l.duration, l.limit)
+		l.wait(ctx)
+	}
 }
