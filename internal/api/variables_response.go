@@ -10,5 +10,6 @@ type VariablesResponseVariables struct {
 
 type VariablesResponseVariablesLinks struct {
 	Subjects string `json:"$subjects"`
+	Subject  string `json:"$subject"`
 	Data     string `json:"$data"`
 }

@@ -6,6 +6,7 @@ type Subject struct {
 	ID        string     `json:"id"`
 	Name      string     `json:"name"`
 	Variables bool       `json:"variables"`
+	Parent    *Subject   `json:"-"`
 	Children  []*Subject `json:"children"`
 }
 

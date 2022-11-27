@@ -5,5 +5,5 @@ type DataResponse struct {
 }
 
 type DataResponseLinks struct {
-	Subject string `json:"$subject"`
+	Variables string `json:"$variables"`
 }
