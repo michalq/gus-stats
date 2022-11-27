@@ -11,6 +11,7 @@ https://api.stat.gov.pl/Home/BdlApi
 Gastronomia
 https://bdl.stat.gov.pl/api/v1/subjects?format=json&parent-id=G190
 
+https://bdl.stat.gov.pl/api/v1/data/by-variable/1609860?format=json&unit-level=0
 # TODO
 
 1. Move limiter as a standalone library

@@ -1,9 +1,11 @@
-.PHONY: build clean subjects variables
+.PHONY: build clean subjects variables server
 
 subjects:
 	go run cmd/crawler/main.go --resource subjects
 variables:
 	go run cmd/crawler/main.go --resource variables
+server:
+	go run cmd/api/main.go
 
 OPENAPI_GENERATOR_VERSION=v6.2.1
 OPENAPI_GENERATOR=go
