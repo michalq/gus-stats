@@ -20,6 +20,9 @@ func main() {
 	variablesBySubject := transformBySubject(variables)
 
 	r := gin.Default()
+	r.GET("/subjects", func(c *gin.Context) {
+		c.JSON(http.StatusOK, &api.ApiReponse[string]{Data: "ok"})
+	})
 	r.GET("/subjects/:subjectId/variables", func(c *gin.Context) {
 		subjectId := c.Param("subjectId")
 		variables := make([]api.VariablesResponseVariables, 0)
@@ -28,7 +31,10 @@ func main() {
 			variables = append(variables, api.VariablesResponseVariables{
 				Id:   varId,
 				Name: gusVar.Name,
-				Data: createApiUrl("/subjects/%s/variables/%s/data", subjectId, varId),
+				Links: api.VariablesResponseVariablesLinks{
+					Subjects: createApiUrl("/subjects"),
+					Data:     createApiUrl("/subjects/%s/variables/%s/data", subjectId, varId),
+				},
 			})
 		}
 		c.JSON(http.StatusOK, &api.ApiReponse[api.VariablesResponse]{Data: variables})
@@ -37,7 +43,9 @@ func main() {
 		subjectId := c.Param("subjectId")
 		c.JSON(http.StatusOK, &api.ApiReponse[api.DataResponse]{
 			Data: api.DataResponse{
-				Subject: createApiUrl("/subjects/%s/variables", subjectId),
+				Links: api.DataResponseLinks{
+					Subject: createApiUrl("/subjects/%s/variables", subjectId),
+				},
 			},
 		})
 	})
