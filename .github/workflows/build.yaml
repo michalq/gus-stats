@@ -1,0 +1,16 @@
+name: Build
+
+on:
+  build:
+    runs-on: ubuntu-latest
+  steps:
+    - uses: checkout
+    - name: Setup Env
+    - name: Build
+    - name: Publish
+
+  test:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Test

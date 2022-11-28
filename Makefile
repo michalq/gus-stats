@@ -6,7 +6,8 @@ variables:
 	go run cmd/crawler/main.go --resource variables
 server:
 	go run cmd/api/main.go
-
+test:
+	go test ./internal/... ./pkg/...
 OPENAPI_GENERATOR_VERSION=v6.2.1
 OPENAPI_GENERATOR=go
 clean:
