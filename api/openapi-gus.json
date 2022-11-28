@@ -8061,7 +8061,7 @@
               "description": "Rok / Year",
               "nullable": true
             },
-            "value": {
+            "val": {
               "type": "number",
               "description": "Wartośc liczbowa / Numeric value",
               "format": "double"

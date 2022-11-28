@@ -2,18 +2,18 @@ package main
 
 import (
 	"encoding/json"
-	"fmt"
-	"net/http"
 	"os"
-	"strconv"
 
 	"github.com/gin-gonic/gin"
-	"github.com/michalq/gus-stats/internal/api"
+	"github.com/michalq/gus-stats/internal/api/handler"
+	"github.com/michalq/gus-stats/internal/config"
+	"github.com/michalq/gus-stats/internal/gus"
 	"github.com/michalq/gus-stats/internal/subject"
 	"github.com/michalq/gus-stats/internal/variable"
 )
 
 func main() {
+	cfg := config.LoadConfig()
 	variables, err := loadVariables()
 	if err != nil {
 		panic(err)
@@ -26,44 +26,22 @@ func main() {
 	subjectsFlatArray := transformSubjectsToFlatArray(subjectsTree)
 	subjectsMap := transformSubjectsToMap(subjectsFlatArray)
 
+	gusCli := gus.NewClient(cfg)
+
 	r := gin.Default()
 	r.GET("/subjects", func(c *gin.Context) {
-		subjectsHandler(c, "", subjectsFlatArray[0], subjectsMap)
+		handler.SubjectsHandler(c, "", subjectsFlatArray[0], subjectsMap)
 	})
 	r.GET("/subjects/:subjectId", func(c *gin.Context) {
-		subjectsHandler(c, c.Param("subjectId"), subjectsFlatArray[0], subjectsMap)
+		handler.SubjectsHandler(c, c.Param("subjectId"), subjectsFlatArray[0], subjectsMap)
 	})
 	r.GET("/subjects/:subjectId/variables", func(c *gin.Context) {
-		subjectId := c.Param("subjectId")
-		variables := make([]api.VariablesResponseVariables, 0)
-		for _, gusVar := range variablesBySubject[subjectId] {
-			varId := strconv.Itoa(int(gusVar.Id))
-			variables = append(variables, api.VariablesResponseVariables{
-				Id:   varId,
-				Name: gusVar.Name,
-				Links: api.VariablesResponseVariablesLinks{
-					Subject: createApiUrl("/subjects/%s", subjectId),
-					Data:    createApiUrl("/subjects/%s/variables/%s/data", subjectId, varId),
-				},
-			})
-		}
-		c.JSON(http.StatusOK, &api.ApiReponse[api.VariablesResponse]{Data: variables})
+		handler.VariablesHandler(c, variablesBySubject)
 	})
 	r.GET("/subjects/:subjectId/variables/:variableId/data", func(c *gin.Context) {
-		subjectId := c.Param("subjectId")
-		c.JSON(http.StatusOK, &api.ApiReponse[api.DataResponse]{
-			Data: api.DataResponse{
-				Links: api.DataResponseLinks{
-					Variables: createApiUrl("/subjects/%s/variables", subjectId),
-				},
-			},
-		})
+		handler.DataHandler(c, c.Param("subjectId"), c.Param("variableId"), gusCli.DataApi)
 	})
 	r.Run(":3000")
-}
-
-func createApiUrl(endpoint string, params ...any) string {
-	return "http://localhost:3000" + fmt.Sprintf(endpoint, params...)
 }
 
 func loadSubjects() (*subject.Subject, error) {
@@ -116,46 +94,4 @@ func transformBySubject(variables []variable.Variable) map[string][]variable.Var
 		variablesBySubject[gusVar.SubjectId] = append(variablesBySubject[gusVar.SubjectId], gusVar)
 	}
 	return variablesBySubject
-}
-
-func subjectsHandler(c *gin.Context, subjectId string, root *subject.Subject, subjectsMap map[string]*subject.Subject) {
-	var sbj *subject.Subject
-	if subjectId != "" {
-		sbj = subjectsMap[subjectId]
-	} else {
-		sbj = root
-	}
-	sbjChildren := make([]api.SubjectsResponseChild, 0)
-	for _, sbjChild := range sbj.Children {
-		sbjChildren = append(sbjChildren, api.SubjectsResponseChild{
-			Id:   sbjChild.ID,
-			Name: sbjChild.Name,
-			Links: api.SubjectsResponseChildLinks{
-				Self: createApiUrl("/subjects/%s", sbjChild.ID),
-			},
-		})
-	}
-	var variablesLink *string
-	if sbj.Variables {
-		variablesLinkStr := createApiUrl("/subjects/%s/variables", sbj.ID)
-		variablesLink = &variablesLinkStr
-	}
-	var parentLink string
-	if sbj.Parent != nil {
-		parentLink = createApiUrl("/subjects/%s", sbj.Parent.ID)
-	} else {
-		parentLink = createApiUrl("/subjects")
-	}
-
-	c.JSON(http.StatusOK, &api.ApiReponse[api.SubjectsResponse]{
-		Data: api.SubjectsResponse{
-			Id:   subjectId,
-			Name: sbj.Name,
-			Links: api.SubjectsResponseLinks{
-				Parent:    parentLink,
-				Variables: variablesLink,
-			},
-			Children: sbjChildren,
-		},
-	})
 }
