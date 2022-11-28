@@ -8,8 +8,8 @@ type SubjectsResponse struct {
 }
 
 type SubjectsResponseLinks struct {
-	Parent    string  `json:"$parent"`
-	Variables *string `json:"$variables"`
+	Parent    *string `json:"$parent,omitempty"`
+	Variables *string `json:"$variables,omitempty"`
 }
 
 type SubjectsResponseChild struct {

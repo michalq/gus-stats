@@ -30,11 +30,13 @@ func SubjectsHandler(c *gin.Context, subjectId string, root *subject.Subject, su
 		variablesLinkStr := createApiUrl("/subjects/%s/variables", sbj.ID)
 		variablesLink = &variablesLinkStr
 	}
-	var parentLink string
+	var parentLink *string
 	if sbj.Parent != nil {
-		parentLink = createApiUrl("/subjects/%s", sbj.Parent.ID)
-	} else {
-		parentLink = createApiUrl("/subjects")
+		parentLinkStr := createApiUrl("/subjects/%s", sbj.Parent.ID)
+		parentLink = &parentLinkStr
+	} else if subjectId != "" {
+		parentLinkStr := createApiUrl("/subjects")
+		parentLink = &parentLinkStr
 	}
 
 	c.JSON(http.StatusOK, &model.ApiReponse[model.SubjectsResponse]{
