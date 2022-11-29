@@ -6,10 +6,10 @@ import (
 
 	"github.com/michalq/gus-stats/internal/cli"
 	"github.com/michalq/gus-stats/internal/config"
-	"github.com/michalq/gus-stats/internal/crawler"
-	gusClient "github.com/michalq/gus-stats/internal/gus"
-	"github.com/michalq/gus-stats/internal/subject"
-	"github.com/michalq/gus-stats/internal/variable"
+	"github.com/michalq/gus-stats/internal/domain/crawler"
+	gusClient "github.com/michalq/gus-stats/internal/domain/gus"
+	"github.com/michalq/gus-stats/internal/domain/subject"
+	"github.com/michalq/gus-stats/internal/domain/variable"
 
 	"flag"
 

@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 	"os"
 
-	"github.com/michalq/gus-stats/internal/crawler"
+	"github.com/michalq/gus-stats/internal/domain/crawler"
 )
 
 func VariablesHandler(ctx context.Context, dataCrawler *crawler.Crawler) error {

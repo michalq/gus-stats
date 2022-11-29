@@ -5,7 +5,7 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/michalq/gus-stats/internal/api/model"
-	"github.com/michalq/gus-stats/internal/subject"
+	"github.com/michalq/gus-stats/internal/domain/subject"
 )
 
 func SubjectsHandler(c *gin.Context, subjectId string, root *subject.Subject, subjectsMap map[string]*subject.Subject) {

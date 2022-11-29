@@ -5,8 +5,8 @@ import (
 	"encoding/json"
 	"os"
 
-	"github.com/michalq/gus-stats/internal/crawler"
-	"github.com/michalq/gus-stats/internal/subject"
+	"github.com/michalq/gus-stats/internal/domain/crawler"
+	"github.com/michalq/gus-stats/internal/domain/subject"
 )
 
 func SubjectsHandler(ctx context.Context, dataCrawler *crawler.Crawler, subjectFinder *subject.Finder) error {

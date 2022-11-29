@@ -6,7 +6,7 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/michalq/gus-stats/internal/api/model"
-	"github.com/michalq/gus-stats/internal/variable"
+	"github.com/michalq/gus-stats/internal/domain/variable"
 )
 
 func VariablesHandler(c *gin.Context, variablesBySubject map[string][]variable.Variable) {

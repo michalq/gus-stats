@@ -7,9 +7,9 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/michalq/gus-stats/internal/api/handler"
 	"github.com/michalq/gus-stats/internal/config"
-	"github.com/michalq/gus-stats/internal/gus"
-	"github.com/michalq/gus-stats/internal/subject"
-	"github.com/michalq/gus-stats/internal/variable"
+	"github.com/michalq/gus-stats/internal/domain/gus"
+	"github.com/michalq/gus-stats/internal/domain/subject"
+	"github.com/michalq/gus-stats/internal/domain/variable"
 )
 
 func main() {
