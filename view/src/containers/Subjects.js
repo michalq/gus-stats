@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import Col from 'react-bootstrap/Col';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
+import SubjectVariables from './SubjectVariables';
 
 export default class Subjects extends Component {
   constructor(props) {
@@ -21,6 +19,7 @@ export default class Subjects extends Component {
     }
     fetch(url).then(data => data.json())
       .then(data => this.setState({
+        subjectId: data.data.id,
         subjects: data.data.children,
         ancestors: data.data.ancestors,
         variables: !!data.data.links.$variables,
@@ -46,9 +45,7 @@ export default class Subjects extends Component {
         <ol className="list-group list-group-flush">{ subjects }</ol>
     </div>
     if (this.state.variables) {
-      content = <div>
-        <h3>Variables</h3>
-      </div>
+      content = <SubjectVariables subjectId={this.state.subjectId}/>
     }
     return (
       <div>
