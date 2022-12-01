@@ -16,13 +16,11 @@ class SidebarNavItems extends React.Component {
         }
     ];
     return (
-      <div>
-        <Nav>
-          {items.map((item, idx) => (
-            <SidebarNavItem key={idx} item={item} />
-          ))}
-        </Nav>
-      </div>
+      <ul className="nav nav-pills flex-column mb-auto">
+        {items.map((item, idx) => (
+          <SidebarNavItem key={idx} item={item} />
+        ))}
+      </ul>
     )
   }
 }

@@ -23,6 +23,7 @@ export default class Subjects extends Component {
       .then(data => this.setState({
         subjects: data.data.children,
         ancestors: data.data.ancestors,
+        variables: !!data.data.links.$variables,
         subject: data.data.name
       }));
   }
@@ -40,23 +41,30 @@ export default class Subjects extends Component {
       <li className="breadcrumb-item"><a href={"/subjects/" + anc.id}>{ anc.name }</a></li>
     ));
 
+    let content = <div>
+      <h3>Children</h3>
+        <ol className="list-group list-group-flush">{ subjects }</ol>
+    </div>
+    if (this.state.variables) {
+      content = <div>
+        <h3>Variables</h3>
+      </div>
+    }
     return (
-      <Container fluid className="main-content-container px-4">
-        <Row className="page-header py-4">
-          <h1 sm="4" className="text-sm-left">Subjects</h1>
-        </Row>
-        <Row>
-          <Col md="9">
+      <div>
+        <div className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+          <h1 className="h2">Dashboard</h1>
+        </div>
+        <div>
           <nav aria-label="breadcrumb">
             <ol className="breadcrumb">
               { ancestors }
               <li className="breadcrumb-item active" aria-current="page">{ this.state.subject }</li>
             </ol>
           </nav>
-          <ol className="list-group list-group-flush">{ subjects }</ol>
-          </Col>
-        </Row>
-      </Container>
+          { content }
+        </div>
+      </div>
     );
   }
 }

@@ -1,23 +1,9 @@
 import * as d3 from "d3";
-import subjects from '../../../data/subjects.json';
-// import variables from '../../../data/variables.json';
-
-for (const root of subjects.children) {
-    const chart = Tree(root, {
-        label: d => d.name,
-        title: (d, n) => `${d.id}`,
-        link: (d, n) => `http://localhost:3000/subjects/${d.id}`,
-        linkTarget: '_self',
-        width: 1500,
-      });
-      console.log(chart.outerHTML)
-      d3.select("#app").append('div').html(chart.outerHTML);
-}
 
 // Copyright 2021 Observable, Inc.
 // Released under the ISC license.
 // https://observablehq.com/@d3/tree
-function Tree(data, { // data is either tabular (array of objects) or hierarchy (nested objects)
+export default function Tree(data, { // data is either tabular (array of objects) or hierarchy (nested objects)
     path, // as an alternative to id and parentId, returns an array identifier, imputing internal nodes
     id = Array.isArray(data) ? d => d.id : null, // if tabular data, given a d in data, returns a unique identifier (string)
     parentId = Array.isArray(data) ? d => d.parentId : null, // if tabular data, given a node d, returns its parent’s identifier

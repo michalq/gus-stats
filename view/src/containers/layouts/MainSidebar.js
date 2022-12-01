@@ -1,30 +1,20 @@
 import React from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
-import Col from 'react-bootstrap/Col';
-
-import SidebarMainNavbar from "./SidebarMainNavbar";
+import { Col } from 'react-bootstrap';
 import SidebarNavItems from "./SidebarNavItems";
 
 class MainSidebar extends React.Component {
   render() {
-    const classes = classNames(
-      "main-sidebar",
-      "px-0",
-      "col-12",
-      "open"
-    );
-
     return (
-      <Col
-        tag="aside"
-        className={classes}
-        lg={{ size: 2 }}
-        md={{ size: 3 }}
-      >
-        <SidebarMainNavbar hideLogoText={false} />
-        <SidebarNavItems />
-      </Col>
+      <nav id="sidebarMenu" className="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+        <div className="position-sticky pt-3">
+          <ul className="nav flex-column">
+            <SidebarNavItems/>
+          </ul>
+        </div>        
+        <hr/>
+      </nav>
     );
   }
 }

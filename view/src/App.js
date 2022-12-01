@@ -3,6 +3,7 @@ import React from 'react';
 import { Navigate, Route, createBrowserRouter, createRoutesFromElements, RouterProvider, useParams } from 'react-router-dom';
 import DefaultLayout from './containers/layouts/DefaultLayout';
 import Subjects from './containers/Subjects'
+import SubjectsTree from './containers/SubjectsTree';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
     {
       path: "/subjects/tree",
       layout: DefaultLayout,
-      element: () => <Subjects/>
+      element: () => <SubjectsTree/>
     },
     {
       path: "/subjects",

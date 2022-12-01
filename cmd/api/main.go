@@ -36,6 +36,9 @@ func main() {
 	r.GET("/subjects", func(c *gin.Context) {
 		handler.SubjectsHandler(c, "", subjectsFlatArray[0], subjectsMap)
 	})
+	r.GET("/subjects/tree", func(c *gin.Context) {
+		handler.SubjectsTreeHandler(c, subjectsFlatArray[0])
+	})
 	r.GET("/subjects/:subjectId", func(c *gin.Context) {
 		handler.SubjectsHandler(c, c.Param("subjectId"), subjectsFlatArray[0], subjectsMap)
 	})
