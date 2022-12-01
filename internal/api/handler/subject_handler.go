@@ -10,6 +10,7 @@ import (
 
 func SubjectsHandler(c *gin.Context, subjectId string, root *subject.Subject, subjectsMap map[string]*subject.Subject) {
 	var sbj *subject.Subject
+	root.Name = "All subjects"
 	if subjectId != "" {
 		sbj = subjectsMap[subjectId]
 	} else {
@@ -18,8 +19,9 @@ func SubjectsHandler(c *gin.Context, subjectId string, root *subject.Subject, su
 	sbjChildren := make([]model.SubjectsResponseChild, 0)
 	for _, sbjChild := range sbj.Children {
 		sbjChildren = append(sbjChildren, model.SubjectsResponseChild{
-			Id:   sbjChild.ID,
-			Name: sbjChild.Name,
+			Id:          sbjChild.ID,
+			Name:        sbjChild.Name,
+			ChildrenQty: len(sbjChild.Children),
 			Links: model.SubjectsResponseChildLinks{
 				Self: createApiUrl("/subjects/%s", sbjChild.ID),
 			},
@@ -38,6 +40,7 @@ func SubjectsHandler(c *gin.Context, subjectId string, root *subject.Subject, su
 		parentLinkStr := createApiUrl("/subjects")
 		parentLink = &parentLinkStr
 	}
+	ancestors := findAncestor(make([]model.SubjectsResponseAncestor, 0), sbj.Parent)
 
 	c.JSON(http.StatusOK, &model.ApiReponse[model.SubjectsResponse]{
 		Data: model.SubjectsResponse{
@@ -47,7 +50,18 @@ func SubjectsHandler(c *gin.Context, subjectId string, root *subject.Subject, su
 				Parent:    parentLink,
 				Variables: variablesLink,
 			},
-			Children: sbjChildren,
+			Ancestors: ancestors,
+			Children:  sbjChildren,
 		},
 	})
+}
+
+func findAncestor(ancestors []model.SubjectsResponseAncestor, sbj *subject.Subject) []model.SubjectsResponseAncestor {
+	if sbj != nil {
+		return findAncestor(append(ancestors, model.SubjectsResponseAncestor{
+			Id:   sbj.ID,
+			Name: sbj.Name,
+		}), sbj.Parent)
+	}
+	return ancestors
 }

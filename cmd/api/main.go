@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"os"
 
+	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 	"github.com/michalq/gus-stats/internal/api/handler"
 	"github.com/michalq/gus-stats/internal/config"
@@ -29,6 +30,9 @@ func main() {
 	gusCli := gus.NewClient(cfg)
 
 	r := gin.Default()
+	r.Use(cors.New(cors.Config{
+		AllowAllOrigins: true,
+	}))
 	r.GET("/subjects", func(c *gin.Context) {
 		handler.SubjectsHandler(c, "", subjectsFlatArray[0], subjectsMap)
 	})
@@ -41,7 +45,7 @@ func main() {
 	r.GET("/subjects/:subjectId/variables/:variableId/data", func(c *gin.Context) {
 		handler.DataHandler(c, c.Param("subjectId"), c.Param("variableId"), gusCli.DataApi)
 	})
-	r.Run(":3000")
+	r.Run(":3030")
 }
 
 func loadSubjects() (*subject.Subject, error) {

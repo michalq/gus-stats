@@ -1,0 +1,19 @@
+.navbar-heading {
+  margin-left: 1.5rem;
+  margin-right: 1.5em;
+
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  font-size: .625rem;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+
+  color: #95aac9;
+}
+
+.navbar-divider {
+  margin-left: 1.5rem;
+  margin-right: 1.5em;
+
+  border-color: #e3ebf6;
+}
