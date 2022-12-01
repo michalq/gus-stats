@@ -1,7 +1,5 @@
 import React from "react";
 import classNames from "classnames";
-import Container from 'react-bootstrap/Container';
-import Navbar from 'react-bootstrap/Navbar';
 
 const MainNavbar = ({ layout, stickyTop }) => {
   const classes = classNames(

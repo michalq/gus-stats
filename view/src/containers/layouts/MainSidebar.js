@@ -1,7 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import classNames from "classnames";
-import { Col } from 'react-bootstrap';
 import SidebarNavItems from "./SidebarNavItems";
 
 class MainSidebar extends React.Component {

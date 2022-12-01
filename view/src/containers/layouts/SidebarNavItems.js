@@ -1,5 +1,4 @@
 import React from "react";
-import Nav from 'react-bootstrap/Nav';
 import SidebarNavItem from "./SidebarNavItem";
 
 class SidebarNavItems extends React.Component {

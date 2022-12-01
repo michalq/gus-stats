@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Tree from '../D3Tree';
-import { Container, Row, Col } from 'react-bootstrap';
 
 export default class SubjectsTree extends Component {
   constructor(props) {

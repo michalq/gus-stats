@@ -4,8 +4,8 @@
     "description": "Subjects visualization",
     "main": "index.html",
     "scripts": {
-        "start": "parcel index.html topo.html --open",
-        "build": "parcel build index.html"
+        "start": "parcel topo.html --open",
+        "build": "parcel build topo.html"
     },
     "dependencies": {
         "@observablehq/stdlib": "3.4.1",
