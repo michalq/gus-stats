@@ -41,7 +41,7 @@ export default class Subjects extends Component {
     ));
 
     let content = <div>
-      <h3>Children</h3>
+      <h3>Subtopics</h3>
         <ol className="list-group list-group-flush">{ subjects }</ol>
     </div>
     if (this.state.variables) {

@@ -5,6 +5,7 @@ import DefaultLayout from './containers/layouts/DefaultLayout';
 import Subjects from './containers/Subjects'
 import SubjectsTree from './containers/SubjectsTree';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap';
 
 function App() {
   const routes = [

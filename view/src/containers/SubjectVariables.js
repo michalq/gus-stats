@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Topo from './graphs/Topo';
+import Modal from './layouts/Modal';
 
 export default class SubjectVariables extends Component {
   constructor(props) {
@@ -29,22 +31,34 @@ export default class SubjectVariables extends Component {
     return (
       <div>
         <div className='row'>
+          <div className='col-sm-12'>
+            <div class="card">
+              <div className='card-body'>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#chart-regular">Render graph</button>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#chart-map-voievodeship">Voievodeship</button>
+                <Modal id="chart-regular" title="Regular chart">
+                  Regular chart
+                </Modal>
+                <Modal id="chart-map-voievodeship" title="Voievodeship map">
+                  <Topo/>
+                </Modal>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className='row'>
           <div class="col-sm-6">
             <div className='card'>
-              <div className="card-header">
-                Variables
-              </div>
               <div className='card-body'>
+                <h5 className="card-title">Variables</h5>
                 { variables }
               </div>
             </div>
           </div>
           <div class="col-sm-6">
             <div className='card'>
-              <div className="card-header">
-                Units
-              </div>
               <div className='card-body'>
+                <h5 className="card-title">Units</h5>
                 <div className="mb-3 form-check">
                   <input type="checkbox" className="form-check-input" id={ "unit-1" }/>
                   <label className="form-check-label" for={ "unit-1" }>Polska</label>
