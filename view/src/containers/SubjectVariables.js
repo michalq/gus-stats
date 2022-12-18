@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import LineChartComponent from './graphs/LineChart';
 import Topo from './graphs/Topo';
 import Modal from './layouts/Modal';
 
@@ -37,7 +38,7 @@ export default class SubjectVariables extends Component {
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#chart-regular">Render graph</button>
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#chart-map-voievodeship">Voievodeship</button>
                 <Modal id="chart-regular" title="Regular chart">
-                  Regular chart
+                  <LineChartComponent/>
                 </Modal>
                 <Modal id="chart-map-voievodeship" title="Voievodeship map">
                   <Topo/>

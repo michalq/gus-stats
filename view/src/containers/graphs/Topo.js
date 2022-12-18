@@ -103,8 +103,8 @@ export default class Topo extends Component {
       range: d3.schemeBlues[9],
       title: (f, d) => `${f.properties.VARNAME_1}`,
       features: voivodeships,
-      width: 600,
-      height: 600,
+      width: 1500,
+      height: 1500,
       projection
     });
     
